@@ -436,7 +436,7 @@ footer {
     <p>
         Step-by-step examples showing how to solve Number problems.
     </p>
-    <button class="btn" onclick="numberMessage('Worked Examples')">
+    <button class="btn" onclick="openWorkedExamples()">
         View Examples
     </button>
 </div>
@@ -781,6 +781,145 @@ footer {
     </div>
 
 </div>
+    <div id="numberWorkedExamplesPage" class="hidden">
+
+    <div class="content-card">
+
+        <h2>Worked Examples</h2>
+
+        <p>Follow each example step by step. Try to understand the method before looking at the answer.</p>
+
+        <hr>
+
+        <h3>Example 1: Integer Operations</h3>
+
+        <p><strong>Question:</strong> Calculate:</p>
+        <p>−8 + 13 − 6</p>
+
+        <p><strong>Step 1:</strong> Start with −8 and add 13.</p>
+        <p>−8 + 13 = 5</p>
+
+        <p><strong>Step 2:</strong> Subtract 6.</p>
+        <p>5 − 6 = −1</p>
+
+        <p><strong>Answer:</strong> −1</p>
+
+        <hr>
+
+        <h3>Example 2: Fractions</h3>
+
+        <p><strong>Question:</strong> Calculate:</p>
+        <p>2/3 + 1/4</p>
+
+        <p><strong>Step 1:</strong> Find a common denominator.</p>
+        <p>The LCM of 3 and 4 is 12.</p>
+
+        <p><strong>Step 2:</strong> Convert both fractions.</p>
+        <p>2/3 = 8/12</p>
+        <p>1/4 = 3/12</p>
+
+        <p><strong>Step 3:</strong> Add.</p>
+        <p>8/12 + 3/12 = 11/12</p>
+
+        <p><strong>Answer:</strong> 11/12</p>
+
+        <hr>
+
+        <h3>Example 3: Percentage of a Quantity</h3>
+
+        <p><strong>Question:</strong> Find 15% of 240.</p>
+
+        <p><strong>Step 1:</strong> Write 15% as a fraction.</p>
+        <p>15% = 15/100</p>
+
+        <p><strong>Step 2:</strong> Multiply.</p>
+        <p>15/100 × 240 = 36</p>
+
+        <p><strong>Answer:</strong> 36</p>
+
+        <hr>
+
+        <h3>Example 4: Ratio</h3>
+
+        <p><strong>Question:</strong> Divide 84 in the ratio 3 : 4.</p>
+
+        <p><strong>Step 1:</strong> Add the ratio parts.</p>
+        <p>3 + 4 = 7 parts</p>
+
+        <p><strong>Step 2:</strong> Find the value of one part.</p>
+        <p>84 ÷ 7 = 12</p>
+
+        <p><strong>Step 3:</strong> Find each share.</p>
+        <p>3 × 12 = 36</p>
+        <p>4 × 12 = 48</p>
+
+        <p><strong>Answer:</strong> 36 and 48</p>
+
+        <hr>
+
+        <h3>Example 5: Indices</h3>
+
+        <p><strong>Question:</strong> Simplify:</p>
+        <p>2³ × 2⁴</p>
+
+        <p><strong>Step 1:</strong> The bases are the same.</p>
+
+        <p><strong>Step 2:</strong> Add the powers.</p>
+        <p>2³ × 2⁴ = 2³⁺⁴</p>
+
+        <p><strong>Step 3:</strong> Simplify.</p>
+        <p>2⁷ = 128</p>
+
+        <p><strong>Answer:</strong> 128</p>
+
+        <hr>
+
+        <h3>Example 6: Standard Form</h3>
+
+        <p><strong>Question:</strong> Write 4,500,000 in standard form.</p>
+
+        <p><strong>Step 1:</strong> Move the decimal point until there is one non-zero digit before it.</p>
+
+        <p>4,500,000 → 4.5</p>
+
+        <p><strong>Step 2:</strong> Count the places moved.</p>
+
+        <p>The decimal point moved 6 places to the left.</p>
+
+        <p><strong>Step 3:</strong> Write the answer.</p>
+
+        <p>4.5 × 10⁶</p>
+
+        <p><strong>Answer:</strong> 4.5 × 10⁶</p>
+
+        <hr>
+
+        <h3>Example 7: Bounds</h3>
+
+        <p><strong>Question:</strong> A length is measured as 8 cm correct to the nearest centimetre. Find the lower and upper bounds.</p>
+
+        <p><strong>Step 1:</strong> Half of 1 cm is 0.5 cm.</p>
+
+        <p><strong>Step 2:</strong> Subtract 0.5 from 8.</p>
+
+        <p>Lower bound = 7.5 cm</p>
+
+        <p><strong>Step 3:</strong> Add 0.5 to 8.</p>
+
+        <p>Upper bound = 8.5 cm</p>
+
+        <p><strong>Answer:</strong></p>
+        <p>7.5 ≤ length &lt; 8.5 cm</p>
+
+        <hr>
+
+        <p><strong>Revision Tip:</strong> Cover the working and try each question yourself before revealing the method.</p>
+
+        <button onclick="openNumber()">← Back to Number</button>
+
+    </div>
+
+</div>
     <div id="standardFormPage" class="hidden">
 
 <section class="hero">
@@ -942,7 +1081,7 @@ function openNumber() {
     document.getElementById("numberPage").classList.remove("hidden");
     document.getElementById("standardFormPage").classList.add("hidden");
     document.getElementById("numberNotesPage").classList.add("hidden");
-
+    document.getElementById("numberWorkedExamplesPage").classList.add("hidden");
     window.scrollTo(0, 0);
 }
 function openStandardForm() {
@@ -954,6 +1093,12 @@ function openStandardForm() {
 function openNumberNotes() {
     document.getElementById("numberPage").classList.add("hidden");
     document.getElementById("numberNotesPage").classList.remove("hidden");
+
+    window.scrollTo(0, 0);
+}
+function openWorkedExamples() {
+    document.getElementById("numberPage").classList.add("hidden");
+    document.getElementById("numberWorkedExamplesPage").classList.remove("hidden");
 
     window.scrollTo(0, 0);
 }
