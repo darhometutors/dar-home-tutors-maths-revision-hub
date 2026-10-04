@@ -335,6 +335,9 @@ footer {
 <div class="topic">
     <h3>Number</h3>
     <p>Number operations, fractions, decimals, percentages, indices and standard form.</p>
+    <button class="btn" onclick="openNumber()">
+        Open Number
+    </button>
 </div>
 
 <div class="topic">
@@ -399,6 +402,80 @@ footer {
 </div>
 
 
+<!-- NUMBER REVISION PAGE -->
+
+<div id="numberPage" class="hidden">
+
+<section class="hero">
+    <h2>IGCSE Mathematics — Year 10 — Number</h2>
+    <p>
+        Build your understanding of Number through notes, examples and practice.
+    </p>
+</section>
+
+<main class="container">
+
+<button class="btn back-btn" onclick="openYear10()">
+    ← Back to Year 10
+</button>
+
+<div class="cards">
+
+<div class="card">
+    <h3>📘 Revision Notes</h3>
+    <p>
+        Clear explanations of the key Number concepts you need for IGCSE Mathematics.
+    </p>
+    <button class="btn" onclick="numberMessage('Revision Notes')">
+        Open Notes
+    </button>
+</div>
+
+<div class="card">
+    <h3>✏️ Worked Examples</h3>
+    <p>
+        Step-by-step examples showing how to solve Number problems.
+    </p>
+    <button class="btn" onclick="numberMessage('Worked Examples')">
+        View Examples
+    </button>
+</div>
+
+<div class="card">
+    <h3>📝 Practice Questions</h3>
+    <p>
+        Practice questions to test your understanding of Number.
+    </p>
+    <button class="btn" onclick="numberMessage('Practice Questions')">
+        Start Practice
+    </button>
+</div>
+
+<div class="card">
+    <h3>🎯 Exam-Style Questions</h3>
+    <p>
+        IGCSE-style questions designed to prepare you for examinations.
+    </p>
+    <button class="btn" onclick="numberMessage('Exam-Style Questions')">
+        Start Exam Practice
+    </button>
+</div>
+
+</div>
+
+<div class="info">
+    <h2>Number Topics</h2>
+    <p>
+        Integers • Fractions • Decimals • Percentages • Ratio •
+        Indices • Standard Form • Bounds • Accuracy
+    </p>
+</div>
+
+</main>
+
+</div>
+
+
 <footer>
     <strong>Dar Home Tutors Maths Revision Hub</strong><br>
     Mathematics revision made easier.
@@ -425,7 +502,20 @@ function goHome() {
 
     window.scrollTo(0, 0);
 }
+function openNumber() {
+    document.getElementById("year10Page").classList.add("hidden");
+    document.getElementById("numberPage").classList.remove("hidden");
 
+    window.scrollTo(0, 0);
+}
+
+function numberMessage(section) {
+    alert(
+        section +
+        " will be available here.\n\n" +
+        "We will add the actual revision content next."
+    );
+}
 function selectYear(year) {
     alert(
         year +
