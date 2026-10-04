@@ -456,7 +456,7 @@ footer {
     <p>
         IGCSE-style questions designed to prepare you for examinations.
     </p>
-    <button class="btn" onclick="numberMessage('Exam-Style Questions')">
+    <button class="btn" onclick="openExamQuestions()">
         Start Exam Practice
     </button>
 </div>
@@ -1055,6 +1055,170 @@ footer {
     </div>
 
 </div>
+    <div id="numberExamQuestionsPage" class="hidden" style="width: 100%; box-sizing: border-box;">
+
+    <div class="content-card" style="width: 100%; box-sizing: border-box;">
+
+        <button onclick="openNumber()" style="display: block; margin-bottom: 20px; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+            ← Back to Number
+        </button>
+
+        <h2>Exam-Style Questions</h2>
+
+        <p>Attempt each question carefully. Show all your working, just as you would in an IGCSE examination.</p>
+
+        <hr>
+
+        <h3>Question 1</h3>
+        <p>Calculate:</p>
+        <p><strong>−12 + 7 × 3</strong></p>
+
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')">
+            Show Answer
+        </button>
+
+        <p class="hidden">
+            <strong>Answer:</strong> 9
+        </p>
+
+        <hr>
+
+        <h3>Question 2</h3>
+        <p>Work out:</p>
+        <p><strong>⅚ − ¼</strong></p>
+
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')">
+            Show Answer
+        </button>
+
+        <p class="hidden">
+            <strong>Answer:</strong> 7/12
+        </p>
+
+        <hr>
+
+        <h3>Question 3</h3>
+        <p>A school has 480 students. 35% of the students are girls.</p>
+        <p>Calculate the number of girls in the school.</p>
+
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')">
+            Show Answer
+        </button>
+
+        <p class="hidden">
+            <strong>Answer:</strong> 168 girls
+        </p>
+
+        <hr>
+
+        <h3>Question 4</h3>
+        <p>Divide 156 in the ratio <strong>5 : 7</strong>.</p>
+
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')">
+            Show Answer
+        </button>
+
+        <p class="hidden">
+            <strong>Answer:</strong> 65 and 91
+        </p>
+
+        <hr>
+
+        <h3>Question 5</h3>
+        <p>Simplify:</p>
+        <p><strong>2³ × 2⁵</strong></p>
+
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')">
+            Show Answer
+        </button>
+
+        <p class="hidden">
+            <strong>Answer:</strong> 2⁸ = 256
+        </p>
+
+        <hr>
+
+        <h3>Question 6</h3>
+        <p>Write <strong>0.000072</strong> in standard form.</p>
+
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')">
+            Show Answer
+        </button>
+
+        <p class="hidden">
+            <strong>Answer:</strong> 7.2 × 10⁻⁵
+        </p>
+
+        <hr>
+
+        <h3>Question 7</h3>
+        <p>A length is measured as <strong>7.4 cm</strong>, correct to the nearest 0.1 cm.</p>
+        <p>State the lower and upper bounds of the length.</p>
+
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')">
+            Show Answer
+        </button>
+
+        <p class="hidden">
+            <strong>Answer:</strong> 7.35 cm ≤ length &lt; 7.45 cm
+        </p>
+
+        <hr>
+
+        <h3>Question 8</h3>
+        <p>Calculate:</p>
+        <p><strong>(3.6 × 10⁴) ÷ (1.2 × 10²)</strong></p>
+
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')">
+            Show Answer
+        </button>
+
+        <p class="hidden">
+            <strong>Answer:</strong> 3 × 10² = 300
+        </p>
+
+        <hr>
+
+        <h3>Question 9</h3>
+        <p>Express <strong>0.375</strong> as a fraction in its simplest form.</p>
+
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')">
+            Show Answer
+        </button>
+
+        <p class="hidden">
+            <strong>Answer:</strong> 3/8
+        </p>
+
+        <hr>
+
+        <h3>Question 10</h3>
+        <p>A number is increased by 20% and becomes 84.</p>
+        <p>Find the original number.</p>
+
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')">
+            Show Answer
+        </button>
+
+        <p class="hidden">
+            <strong>Answer:</strong> 70
+        </p>
+
+        <hr>
+
+        <p>
+            <strong>Exam Challenge:</strong>
+            Attempt all ten questions without using a calculator where appropriate.
+            Show every step of your working before checking the answers.
+        </p>
+
+        <button onclick="openNumber()" style="margin-top: 20px; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+            ← Back to Number
+        </button>
+
+    </div>
+
+</div>
     <div id="standardFormPage" class="hidden">
 
 <section class="hero">
@@ -1226,7 +1390,7 @@ function openNumber() {
     document.getElementById("numberNotesPage").classList.add("hidden");
     document.getElementById("numberWorkedExamplesPage").classList.add("hidden");
     document.getElementById("numberPracticeQuestionsPage").classList.add("hidden");
-
+    document.getElementById("numberExamQuestionsPage").classList.add("hidden");
     window.scrollTo(0, 0);
 }
 function openStandardForm() {
@@ -1251,6 +1415,12 @@ function openWorkedExamples() {
     function openPracticeQuestions() {
     document.getElementById("numberPage").classList.add("hidden");
     document.getElementById("numberPracticeQuestionsPage").classList.remove("hidden");
+
+    window.scrollTo(0, 0);
+}
+    function openExamQuestions() {
+    document.getElementById("numberPage").classList.add("hidden");
+    document.getElementById("numberExamQuestionsPage").classList.remove("hidden");
 
     window.scrollTo(0, 0);
 }
