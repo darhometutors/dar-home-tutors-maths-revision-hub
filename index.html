@@ -446,7 +446,7 @@ footer {
     <p>
         Practice questions to test your understanding of Number.
     </p>
-    <button class="btn" onclick="numberMessage('Practice Questions')">
+    <button class="btn" onclick="openPracticeQuestions()">
         Start Practice
     </button>
 </div>
@@ -922,6 +922,139 @@ footer {
     </div>
 
 </div>
+    <div id="numberPracticeQuestionsPage" class="hidden" style="width: 100%; box-sizing: border-box;">
+
+    <div class="content-card" style="width: 100%; box-sizing: border-box;">
+
+        <button onclick="openNumber()" style="display: block; margin-bottom: 20px; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+            ← Back to Number
+        </button>
+
+        <h2>Practice Questions</h2>
+
+        <p>Try each question yourself before revealing the answer.</p>
+
+        <hr>
+
+        <h3>Question 1</h3>
+        <p>Calculate: −7 + 15</p>
+
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')">
+            Show Answer
+        </button>
+
+        <p class="hidden"><strong>Answer:</strong> 8</p>
+
+        <hr>
+
+        <h3>Question 2</h3>
+        <p>Calculate: 18 − 25</p>
+
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')">
+            Show Answer
+        </button>
+
+        <p class="hidden"><strong>Answer:</strong> −7</p>
+
+        <hr>
+
+        <h3>Question 3</h3>
+        <p>Calculate: ¾ + ⅝</p>
+
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')">
+            Show Answer
+        </button>
+
+        <p class="hidden"><strong>Answer:</strong> 1⅜</p>
+
+        <hr>
+
+        <h3>Question 4</h3>
+        <p>Find 25% of 360.</p>
+
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')">
+            Show Answer
+        </button>
+
+        <p class="hidden"><strong>Answer:</strong> 90</p>
+
+        <hr>
+
+        <h3>Question 5</h3>
+        <p>Divide 72 in the ratio 5 : 3.</p>
+
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')">
+            Show Answer
+        </button>
+
+        <p class="hidden"><strong>Answer:</strong> 45 and 27</p>
+
+        <hr>
+
+        <h3>Question 6</h3>
+        <p>Simplify: 3² × 3⁴</p>
+
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')">
+            Show Answer
+        </button>
+
+        <p class="hidden"><strong>Answer:</strong> 3⁶ = 729</p>
+
+        <hr>
+
+        <h3>Question 7</h3>
+        <p>Write 6,300,000 in standard form.</p>
+
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')">
+            Show Answer
+        </button>
+
+        <p class="hidden"><strong>Answer:</strong> 6.3 × 10⁶</p>
+
+        <hr>
+
+        <h3>Question 8</h3>
+        <p>A length is 12 cm correct to the nearest centimetre. State its lower and upper bounds.</p>
+
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')">
+            Show Answer
+        </button>
+
+        <p class="hidden"><strong>Answer:</strong> 11.5 cm ≤ length &lt; 12.5 cm</p>
+
+        <hr>
+
+        <h3>Question 9</h3>
+        <p>Express 0.00045 in standard form.</p>
+
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')">
+            Show Answer
+        </button>
+
+        <p class="hidden"><strong>Answer:</strong> 4.5 × 10⁻⁴</p>
+
+        <hr>
+
+        <h3>Question 10</h3>
+        <p>Calculate: 2.5 × 10³</p>
+
+        <button onclick="this.nextElementSibling.classList.toggle('hidden')">
+            Show Answer
+        </button>
+
+        <p class="hidden"><strong>Answer:</strong> 2500</p>
+
+        <hr>
+
+        <p><strong>Challenge:</strong> Try all ten questions without looking at the answers. Then check your work.</p>
+
+        <button onclick="openNumber()" style="margin-top: 20px; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+            ← Back to Number
+        </button>
+
+    </div>
+
+</div>
     <div id="standardFormPage" class="hidden">
 
 <section class="hero">
@@ -1086,6 +1219,16 @@ function openNumber() {
     document.getElementById("numberWorkedExamplesPage").classList.add("hidden");
     window.scrollTo(0, 0);
 }
+function openNumber() {
+    document.getElementById("year10Page").classList.add("hidden");
+    document.getElementById("numberPage").classList.remove("hidden");
+    document.getElementById("standardFormPage").classList.add("hidden");
+    document.getElementById("numberNotesPage").classList.add("hidden");
+    document.getElementById("numberWorkedExamplesPage").classList.add("hidden");
+    document.getElementById("numberPracticeQuestionsPage").classList.add("hidden");
+
+    window.scrollTo(0, 0);
+}
 function openStandardForm() {
     document.getElementById("numberPage").classList.add("hidden");
     document.getElementById("standardFormPage").classList.remove("hidden");
@@ -1101,6 +1244,13 @@ function openNumberNotes() {
 function openWorkedExamples() {
     document.getElementById("numberPage").classList.add("hidden");
     document.getElementById("numberWorkedExamplesPage").classList.remove("hidden");
+
+    window.scrollTo(0, 0);
+}
+
+    function openPracticeQuestions() {
+    document.getElementById("numberPage").classList.add("hidden");
+    document.getElementById("numberPracticeQuestionsPage").classList.remove("hidden");
 
     window.scrollTo(0, 0);
 }
