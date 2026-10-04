@@ -426,7 +426,7 @@ footer {
     <p>
         Clear explanations of the key Number concepts you need for IGCSE Mathematics.
     </p>
-    <button class="btn" onclick="numberMessage('Revision Notes')">
+    <button class="topic" onclick="openNumberNotes()">
         Open Notes
     </button>
 </div>
@@ -539,7 +539,249 @@ footer {
 
 <!-- STANDARD FORM LESSON -->
 
-<div id="standardFormPage" class="hidden">
+<!-- NUMBER REVISION NOTES PAGE -->
+
+<div id="numberNotesPage" class="hidden">
+
+    <div class="page-header">
+        <button class="back-btn" onclick="openNumber()">← Back to Number</button>
+
+        <h1>Number — Revision Notes</h1>
+
+        <p>
+            Key ideas and methods you need for IGCSE Mathematics.
+        </p>
+    </div>
+
+    <div class="info">
+
+        <h2>1. Integers</h2>
+
+        <p>
+            Integers are whole numbers, including negative numbers, zero
+            and positive numbers.
+        </p>
+
+        <p><strong>Examples:</strong></p>
+
+        <p>
+            −5, −2, 0, 3, 7
+        </p>
+
+        <h3>Rules for adding integers</h3>
+
+        <p>
+            Same signs → add the numbers and keep the sign.
+        </p>
+
+        <p>
+            Different signs → subtract the smaller number from the larger
+            and use the sign of the larger number.
+        </p>
+
+        <div class="example">
+            −7 + −3 = −10
+            <br><br>
+            −8 + 5 = −3
+        </div>
+
+
+        <h2>2. Fractions</h2>
+
+        <p>
+            A fraction represents part of a whole.
+        </p>
+
+        <p>
+            In the fraction
+            <strong>3/5</strong>,
+            3 is the numerator and 5 is the denominator.
+        </p>
+
+        <h3>Adding and subtracting fractions</h3>
+
+        <p>
+            Fractions must have a common denominator.
+        </p>
+
+        <div class="example">
+            1/4 + 2/4 = 3/4
+            <br><br>
+            5/6 − 1/6 = 4/6 = 2/3
+        </div>
+
+        <h3>Multiplying fractions</h3>
+
+        <p>
+            Multiply the numerators and multiply the denominators.
+        </p>
+
+        <div class="example">
+            2/3 × 4/5 = 8/15
+        </div>
+
+
+        <h2>3. Decimals</h2>
+
+        <p>
+            Decimals represent fractions using place value.
+        </p>
+
+        <p>
+            For example:
+        </p>
+
+        <div class="example">
+            0.5 = 1/2
+            <br>
+            0.25 = 1/4
+            <br>
+            0.75 = 3/4
+        </div>
+
+        <p>
+            Remember the place values:
+        </p>
+
+        <p>
+            tenths → hundredths → thousandths
+        </p>
+
+
+        <h2>4. Percentages</h2>
+
+        <p>
+            Percentage means "out of 100".
+        </p>
+
+        <div class="example">
+            25% = 25/100 = 1/4
+        </div>
+
+        <h3>Finding a percentage of a quantity</h3>
+
+        <div class="example">
+            20% of 80
+            <br>
+            = 20/100 × 80
+            <br>
+            = 16
+        </div>
+
+
+        <h2>5. Ratio</h2>
+
+        <p>
+            A ratio compares quantities.
+        </p>
+
+        <div class="example">
+            2 : 3
+        </div>
+
+        <p>
+            This means that for every 2 parts of one quantity,
+            there are 3 parts of the other.
+        </p>
+
+        <h3>Simplifying ratios</h3>
+
+        <p>
+            Divide every part by the same number.
+        </p>
+
+        <div class="example">
+            12 : 18
+            <br>
+            = 2 : 3
+        </div>
+
+
+        <h2>6. Indices</h2>
+
+        <p>
+            An index tells us how many times a number is multiplied by itself.
+        </p>
+
+        <div class="example">
+            2³ = 2 × 2 × 2 = 8
+        </div>
+
+        <h3>Important index laws</h3>
+
+        <div class="example">
+            aᵐ × aⁿ = aᵐ⁺ⁿ
+            <br><br>
+            aᵐ ÷ aⁿ = aᵐ⁻ⁿ
+            <br><br>
+            (aᵐ)ⁿ = aᵐⁿ
+        </div>
+
+
+        <h2>7. Standard Form</h2>
+
+        <p>
+            Standard form is used to write very large or very small numbers
+            in a convenient way.
+        </p>
+
+        <div class="example">
+            a × 10ⁿ
+        </div>
+
+        <p>
+            where:
+        </p>
+
+        <ul>
+            <li>1 ≤ a &lt; 10</li>
+            <li>n is an integer</li>
+        </ul>
+
+        <div class="example">
+            4,500,000 = 4.5 × 10⁶
+            <br><br>
+            0.00072 = 7.2 × 10⁻⁴
+        </div>
+
+
+        <h2>8. Bounds and Accuracy</h2>
+
+        <p>
+            When a measurement has been rounded, the original value lies
+            within a range called its bounds.
+        </p>
+
+        <p>
+            For example, if 8 cm is correct to the nearest centimetre:
+        </p>
+
+        <div class="example">
+            Lower bound = 7.5 cm
+            <br>
+            Upper bound = 8.5 cm
+        </div>
+
+        <p>
+            The lower bound is included, but the upper bound is not.
+        </p>
+
+
+        <div class="goal-box">
+
+            <h2>Revision Tip</h2>
+
+            <p>
+                Don't just read the notes. After studying each topic,
+                attempt questions without looking at the examples.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+    <div id="standardFormPage" class="hidden">
 
 <section class="hero">
     <h2>Standard Form</h2>
@@ -707,12 +949,20 @@ function openStandardForm() {
 
     window.scrollTo(0, 0);
 }
+function openNumberNotes() {
+    document.getElementById("numberPage").classList.add("hidden");
+    document.getElementById("numberNotesPage").classList.remove("hidden");
+
+    window.scrollTo(0, 0);
+}
 function numberMessage(section) {
-    alert(
-        section +
-        " will be available here.\n\n" +
-        "We will add the actual revision content next."
-    );
+
+    if (section === "Revision Notes") {
+        document.getElementById("numberPage").classList.add("hidden");
+        document.getElementById("numberNotesPage").classList.remove("hidden");
+    }
+
+    window.scrollTo(0, 0);
 }
 function selectYear(year) {
     alert(
