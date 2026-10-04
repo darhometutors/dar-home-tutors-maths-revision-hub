@@ -466,16 +466,209 @@ footer {
 <div class="info">
     <h2>Number Topics</h2>
     <p>
-        Integers • Fractions • Decimals • Percentages • Ratio •
-        Indices • Standard Form • Bounds • Accuracy
+        Select a topic below to begin your revision.
     </p>
+</div>
+
+<div class="topic-list">
+
+<div class="topic">
+    <h3>Standard Form</h3>
+    <p>
+        Learn how to write very large and very small numbers in standard form.
+    </p>
+    <button class="btn" onclick="openStandardForm()">
+        Open Standard Form
+    </button>
+</div>
+
+<div class="topic">
+    <h3>Integers</h3>
+    <p>
+        Positive and negative numbers and calculations with integers.
+    </p>
+</div>
+
+<div class="topic">
+    <h3>Fractions</h3>
+    <p>
+        Fractions, operations, conversions and applications.
+    </p>
+</div>
+
+<div class="topic">
+    <h3>Decimals</h3>
+    <p>
+        Decimal calculations, conversions and applications.
+    </p>
+</div>
+
+<div class="topic">
+    <h3>Percentages</h3>
+    <p>
+        Percentage change, reverse percentages and applications.
+    </p>
+</div>
+
+<div class="topic">
+    <h3>Ratio</h3>
+    <p>
+        Ratios, sharing quantities and proportional reasoning.
+    </p>
+</div>
+
+<div class="topic">
+    <h3>Indices</h3>
+    <p>
+        Index laws, powers and roots.
+    </p>
+</div>
+
+<div class="topic">
+    <h3>Bounds & Accuracy</h3>
+    <p>
+        Upper bounds, lower bounds and accuracy.
+    </p>
+</div>
+
 </div>
 
 </main>
 
 </div>
 
+<!-- STANDARD FORM LESSON -->
 
+<div id="standardFormPage" class="hidden">
+
+<section class="hero">
+    <h2>Standard Form</h2>
+    <p>
+        IGCSE Mathematics — Year 10 — Number
+    </p>
+</section>
+
+<main class="container">
+
+<button class="btn back-btn" onclick="openNumber()">
+    ← Back to Number
+</button>
+
+<div class="info" style="text-align:left;">
+
+<h2>What is Standard Form?</h2>
+
+<p>
+Standard form is a way of writing very large or very small numbers
+using powers of 10.
+</p>
+
+<br>
+
+<p>
+A number written in standard form has the form:
+</p>
+
+<h2 style="text-align:center;">
+    a × 10<sup>n</sup>
+</h2>
+
+<p>
+where <strong>1 ≤ a &lt; 10</strong> and <strong>n</strong> is an integer.
+</p>
+
+<br>
+
+<h2>Example 1 — Large Number</h2>
+
+<p>
+Write 4500000 in standard form.
+</p>
+
+<p>
+Move the decimal point until the first number is between 1 and 10:
+</p>
+
+<h2>4.5 × 10<sup>6</sup></h2>
+
+<p>
+The decimal point moved 6 places to the left, so the power is +6.
+</p>
+
+<br>
+
+<h2>Example 2 — Small Number</h2>
+
+<p>
+Write 0.00072 in standard form.
+</p>
+
+<h2>7.2 × 10<sup>-4</sup></h2>
+
+<p>
+The decimal point moved 4 places to the right, so the power is −4.
+</p>
+
+<br>
+
+<h2>Remember</h2>
+
+<p>
+<strong>Large number → positive power of 10</strong>
+</p>
+
+<p>
+<strong>Small number → negative power of 10</strong>
+</p>
+
+<br>
+
+<h2>Quick Practice</h2>
+
+<p>Try these without looking at the examples:</p>
+
+<ol style="padding-left:25px; margin-top:15px;">
+
+<li style="margin-bottom:10px;">
+Write 6300000 in standard form.
+</li>
+
+<li style="margin-bottom:10px;">
+Write 0.00045 in standard form.
+</li>
+
+<li style="margin-bottom:10px;">
+Write 8.2 × 10<sup>5</sup> as an ordinary number.
+</li>
+
+<li style="margin-bottom:10px;">
+Write 3.7 × 10<sup>-3</sup> as an ordinary number.
+</li>
+
+</ol>
+
+<br>
+
+<div style="
+background:#f4f7fb;
+padding:20px;
+border-radius:12px;
+">
+
+<h3>🎯 Your Goal</h3>
+
+<p>
+Before moving on, make sure you can convert numbers
+<strong>both ways</strong> between ordinary form and standard form.
+</p>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
 <footer>
     <strong>Dar Home Tutors Maths Revision Hub</strong><br>
     Mathematics revision made easier.
@@ -508,7 +701,12 @@ function openNumber() {
 
     window.scrollTo(0, 0);
 }
+function openStandardForm() {
+    document.getElementById("numberPage").classList.add("hidden");
+    document.getElementById("standardFormPage").classList.remove("hidden");
 
+    window.scrollTo(0, 0);
+}
 function numberMessage(section) {
     alert(
         section +
