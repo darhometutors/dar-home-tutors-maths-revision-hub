@@ -1539,8 +1539,10 @@ function openIGCSE() {
     window.scrollTo(0, 0);
 }
 function openYear10() {
+    document.getElementById("homePage").classList.add("hidden");
     document.getElementById("igcsePage").classList.add("hidden");
     document.getElementById("year10Page").classList.remove("hidden");
+    document.getElementById("numberPage").classList.add("hidden");
 
     window.scrollTo(0, 0);
 }
