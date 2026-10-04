@@ -1551,14 +1551,19 @@ function goHome() {
     window.scrollTo(0, 0);
 }
 function openNumber() {
+    document.getElementById("homePage").classList.add("hidden");
+    document.getElementById("igcsePage").classList.add("hidden");
     document.getElementById("year10Page").classList.add("hidden");
+
     document.getElementById("numberPage").classList.remove("hidden");
+
     document.getElementById("standardFormPage").classList.add("hidden");
     document.getElementById("numberNotesPage").classList.add("hidden");
     document.getElementById("numberWorkedExamplesPage").classList.add("hidden");
     document.getElementById("numberPracticeQuestionsPage").classList.add("hidden");
     document.getElementById("numberExamQuestionsPage").classList.add("hidden");
     document.getElementById("integersPage").classList.add("hidden");
+
     window.scrollTo(0, 0);
 }
 function openStandardForm() {
