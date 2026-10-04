@@ -487,6 +487,10 @@ footer {
     <p>
         Positive and negative numbers and calculations with integers.
     </p>
+
+    <button class="btn" onclick="openIntegers()">
+        Open Integers
+    </button>
 </div>
 
 <div class="topic">
@@ -1219,6 +1223,177 @@ footer {
     </div>
 
 </div>
+    <div id="integersPage" class="hidden" style="width: 100%; box-sizing: border-box;">
+
+    <div class="content-card" style="width: 100%; box-sizing: border-box;">
+
+        <button onclick="openNumber()" style="display: block; margin-bottom: 20px; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+            ← Back to Number
+        </button>
+
+        <h2>Integers</h2>
+
+        <p>
+            Integers are whole numbers that can be positive, negative, or zero.
+        </p>
+
+        <hr>
+
+        <h3>1. Positive and Negative Integers</h3>
+
+        <p>
+            Positive integers are numbers greater than zero:
+            <strong>1, 2, 3, 4, 5, ...</strong>
+        </p>
+
+        <p>
+            Negative integers are numbers less than zero:
+            <strong>−1, −2, −3, −4, −5, ...</strong>
+        </p>
+
+        <p>
+            Zero is neither positive nor negative.
+        </p>
+
+        <hr>
+
+        <h3>2. The Number Line</h3>
+
+        <p>
+            On a number line, numbers increase as you move to the right
+            and decrease as you move to the left.
+        </p>
+
+        <p>
+            For example:
+            <strong>−5 &lt; −2 &lt; 0 &lt; 3 &lt; 7</strong>
+        </p>
+
+        <hr>
+
+        <h3>3. Adding Integers</h3>
+
+        <p>
+            When adding integers with the same sign, add their values
+            and keep the sign.
+        </p>
+
+        <p>
+            Example:
+            <strong>−4 + (−6) = −10</strong>
+        </p>
+
+        <p>
+            When the signs are different, subtract the smaller absolute value
+            from the larger absolute value and keep the sign of the larger value.
+        </p>
+
+        <p>
+            Example:
+            <strong>−8 + 13 = 5</strong>
+        </p>
+
+        <hr>
+
+        <h3>4. Subtracting Integers</h3>
+
+        <p>
+            Remember:
+            <strong>subtracting a number is the same as adding its opposite.</strong>
+        </p>
+
+        <p>
+            Example:
+            <strong>7 − 10 = 7 + (−10) = −3</strong>
+        </p>
+
+        <p>
+            Another example:
+            <strong>−5 − (−8) = −5 + 8 = 3</strong>
+        </p>
+
+        <hr>
+
+        <h3>5. Multiplying Integers</h3>
+
+        <p>Use these sign rules:</p>
+
+        <p>
+            Positive × Positive = Positive
+        </p>
+
+        <p>
+            Negative × Negative = Positive
+        </p>
+
+        <p>
+            Positive × Negative = Negative
+        </p>
+
+        <p>
+            Negative × Positive = Negative
+        </p>
+
+        <p>
+            Example:
+            <strong>−6 × −4 = 24</strong>
+        </p>
+
+        <hr>
+
+        <h3>6. Dividing Integers</h3>
+
+        <p>
+            Division follows the same sign rules as multiplication.
+        </p>
+
+        <p>
+            Example:
+            <strong>−24 ÷ 6 = −4</strong>
+        </p>
+
+        <p>
+            Example:
+            <strong>−24 ÷ −6 = 4</strong>
+        </p>
+
+        <hr>
+
+        <h3>7. Order of Operations</h3>
+
+        <p>
+            When a calculation contains several operations, follow the
+            correct order of operations.
+        </p>
+
+        <p>
+            Brackets → Indices → Multiplication/Division → Addition/Subtraction
+        </p>
+
+        <p>
+            Example:
+            <strong>−3 + 4 × 5 = −3 + 20 = 17</strong>
+        </p>
+
+        <hr>
+
+        <h3>Quick Check</h3>
+
+        <p><strong>1.</strong> Which is greater: −3 or −7?</p>
+        <p><strong>2.</strong> Calculate: −9 + 14</p>
+        <p><strong>3.</strong> Calculate: 6 − 11</p>
+        <p><strong>4.</strong> Calculate: −7 × −3</p>
+        <p><strong>5.</strong> Calculate: −36 ÷ 4</p>
+
+        <hr>
+
+        <button onclick="openNumber()" style="margin-top: 20px; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+            ← Back to Number
+        </button>
+
+    </div>
+
+</div>
     <div id="standardFormPage" class="hidden">
 
 <section class="hero">
@@ -1391,11 +1566,18 @@ function openNumber() {
     document.getElementById("numberWorkedExamplesPage").classList.add("hidden");
     document.getElementById("numberPracticeQuestionsPage").classList.add("hidden");
     document.getElementById("numberExamQuestionsPage").classList.add("hidden");
+    document.getElementById("integersPage").classList.add("hidden");
     window.scrollTo(0, 0);
 }
 function openStandardForm() {
     document.getElementById("numberPage").classList.add("hidden");
     document.getElementById("standardFormPage").classList.remove("hidden");
+
+    window.scrollTo(0, 0);
+}
+    function openIntegers() {
+    document.getElementById("numberPage").classList.add("hidden");
+    document.getElementById("integersPage").classList.remove("hidden");
 
     window.scrollTo(0, 0);
 }
