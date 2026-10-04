@@ -291,7 +291,7 @@ footer {
     <p>
         IGCSE Mathematics revision, practice and topic preparation.
     </p>
-    <button class="btn" onclick="selectYear('Year 10')">
+    <button class="btn" onclick="openYear10()">
         Open Year 10
     </button>
 </div>
@@ -304,6 +304,92 @@ footer {
     <button class="btn" onclick="selectYear('Year 11')">
         Open Year 11
     </button>
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+
+    <!-- YEAR 10 MATHEMATICS PAGE -->
+
+<div id="year10Page" class="hidden">
+
+<section class="hero">
+    <h2>IGCSE Mathematics — Year 10</h2>
+    <p>
+        Choose a Mathematics topic to begin your revision.
+    </p>
+</section>
+
+<main class="container">
+
+<button class="btn back-btn" onclick="openIGCSE()">
+    ← Back to IGCSE
+</button>
+
+<div class="topic-list">
+
+<div class="topic">
+    <h3>Number</h3>
+    <p>Number operations, fractions, decimals, percentages, indices and standard form.</p>
+</div>
+
+<div class="topic">
+    <h3>Algebra</h3>
+    <p>Expressions, equations, inequalities, sequences and algebraic manipulation.</p>
+</div>
+
+<div class="topic">
+    <h3>Graphs & Functions</h3>
+    <p>Coordinates, linear graphs, quadratic graphs and functions.</p>
+</div>
+
+<div class="topic">
+    <h3>Geometry</h3>
+    <p>Angles, polygons, circles, constructions and geometric reasoning.</p>
+</div>
+
+<div class="topic">
+    <h3>Mensuration</h3>
+    <p>Perimeter, area, surface area and volume.</p>
+</div>
+
+<div class="topic">
+    <h3>Trigonometry</h3>
+    <p>Right-angled triangles, trigonometric ratios and applications.</p>
+</div>
+
+<div class="topic">
+    <h3>Statistics</h3>
+    <p>Data representation, averages, spread and statistical diagrams.</p>
+</div>
+
+<div class="topic">
+    <h3>Probability</h3>
+    <p>Probability, sample spaces and probability calculations.</p>
+</div>
+
+<div class="topic">
+    <h3>Vectors</h3>
+    <p>Vector notation, vector geometry and calculations.</p>
+</div>
+
+<div class="topic">
+    <h3>Transformations</h3>
+    <p>Translation, reflection, rotation and enlargement.</p>
+</div>
+
+<div class="topic">
+    <h3>Coordinate Geometry</h3>
+    <p>Gradients, equations of lines, distance and midpoint.</p>
+</div>
+
+<div class="topic">
+    <h3>Exam Practice</h3>
+    <p>IGCSE-style questions and examination preparation.</p>
 </div>
 
 </div>
@@ -327,7 +413,12 @@ function openIGCSE() {
 
     window.scrollTo(0, 0);
 }
+function openYear10() {
+    document.getElementById("igcsePage").classList.add("hidden");
+    document.getElementById("year10Page").classList.remove("hidden");
 
+    window.scrollTo(0, 0);
+}
 function goHome() {
     document.getElementById("igcsePage").classList.add("hidden");
     document.getElementById("homePage").classList.remove("hidden");
