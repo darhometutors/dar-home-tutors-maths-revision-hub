@@ -496,8 +496,12 @@ footer {
 <div class="topic">
     <h3>Fractions</h3>
     <p>
-        Fractions, operations, conversions and applications.
+        Adding, subtracting, multiplying and dividing fractions.
     </p>
+
+    <button class="btn" onclick="openFractions()">
+        Open Fractions
+    </button>
 </div>
 
 <div class="topic">
@@ -1223,6 +1227,126 @@ footer {
     </div>
 
 </div>
+    <div id="fractionsPage" class="hidden" style="width: 100%; box-sizing: border-box;">
+
+    <div class="content-card" style="width: 100%; box-sizing: border-box;">
+
+        <button onclick="openNumber()" style="display: block; margin-bottom: 20px; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+            ← Back to Number
+        </button>
+
+        <h2>Fractions</h2>
+
+        <p>
+            Fractions represent parts of a whole or quantities.
+        </p>
+
+        <hr>
+
+        <h3>1. Types of Fractions</h3>
+
+        <p><strong>Proper fraction:</strong> The numerator is smaller than the denominator.</p>
+        <p>Example: <strong>3/5</strong></p>
+
+        <p><strong>Improper fraction:</strong> The numerator is greater than or equal to the denominator.</p>
+        <p>Example: <strong>7/4</strong></p>
+
+        <p><strong>Mixed number:</strong> A whole number and a fraction together.</p>
+        <p>Example: <strong>1 3/4</strong></p>
+
+        <hr>
+
+        <h3>2. Equivalent Fractions</h3>
+
+        <p>
+            Equivalent fractions have the same value.
+        </p>
+
+        <p>
+            Example:
+            <strong>1/2 = 2/4 = 3/6</strong>
+        </p>
+
+        <hr>
+
+        <h3>3. Simplifying Fractions</h3>
+
+        <p>
+            Divide the numerator and denominator by their highest common factor.
+        </p>
+
+        <p>
+            Example:
+            <strong>12/18 = 2/3</strong>
+        </p>
+
+        <hr>
+
+        <h3>4. Adding and Subtracting Fractions</h3>
+
+        <p>
+            Fractions with the same denominator can be added or subtracted directly.
+        </p>
+
+        <p>
+            Example:
+            <strong>2/7 + 3/7 = 5/7</strong>
+        </p>
+
+        <p>
+            For different denominators, find a common denominator first.
+        </p>
+
+        <p>
+            Example:
+            <strong>1/2 + 1/3 = 3/6 + 2/6 = 5/6</strong>
+        </p>
+
+        <hr>
+
+        <h3>5. Multiplying Fractions</h3>
+
+        <p>
+            Multiply the numerators together and the denominators together.
+        </p>
+
+        <p>
+            Example:
+            <strong>2/3 × 3/4 = 6/12 = 1/2</strong>
+        </p>
+
+        <hr>
+
+        <h3>6. Dividing Fractions</h3>
+
+        <p>
+            To divide by a fraction, multiply by its reciprocal.
+        </p>
+
+        <p>
+            Example:
+            <strong>2/3 ÷ 4/5 = 2/3 × 5/4 = 10/12 = 5/6</strong>
+        </p>
+
+        <hr>
+
+        <h3>Quick Check</h3>
+
+        <p><strong>1.</strong> Simplify 8/12.</p>
+        <p><strong>2.</strong> Calculate 2/5 + 1/5.</p>
+        <p><strong>3.</strong> Calculate 3/4 − 1/8.</p>
+        <p><strong>4.</strong> Calculate 2/3 × 3/5.</p>
+        <p><strong>5.</strong> Calculate 1/2 ÷ 1/4.</p>
+
+        <hr>
+
+        <button onclick="openNumber()" style="margin-top: 20px; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+            ← Back to Number
+        </button>
+
+    </div>
+
+</div>
     <div id="integersPage" class="hidden" style="width: 100%; box-sizing: border-box;">
 
     <div class="content-card" style="width: 100%; box-sizing: border-box;">
@@ -1579,6 +1703,12 @@ function openStandardForm() {
     function openIntegers() {
     document.getElementById("numberPage").classList.add("hidden");
     document.getElementById("integersPage").classList.remove("hidden");
+
+    window.scrollTo(0, 0);
+}
+function openFractions() {
+    document.getElementById("numberPage").classList.add("hidden");
+    document.getElementById("fractionsPage").classList.remove("hidden");
 
     window.scrollTo(0, 0);
 }
