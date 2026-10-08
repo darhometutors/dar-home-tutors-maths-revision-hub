@@ -1354,6 +1354,172 @@ footer {
     </div>
 
 </div>
+    <div id="fractionsExamplesPage" class="hidden" style="width: 100%; box-sizing: border-box;">
+
+    <div class="content-card" style="width: 100%; box-sizing: border-box;">
+
+        <button onclick="openFractions()" style="margin-bottom: 20px; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+            ← Back to Fractions
+        </button>
+
+        <h2>Fractions — Worked Examples</h2>
+
+        <p>Study each example carefully and follow the method step by step.</p>
+
+        <hr>
+
+        <h3>Example 1: Simplifying a Fraction</h3>
+
+        <p><strong>Question:</strong> Simplify 18/24.</p>
+
+        <p><strong>Step 1:</strong> Find the highest common factor of 18 and 24.</p>
+
+        <p>HCF = 6</p>
+
+        <p><strong>Step 2:</strong> Divide both numerator and denominator by 6.</p>
+
+        <p>18 ÷ 6 = 3</p>
+        <p>24 ÷ 6 = 4</p>
+
+        <p><strong>Answer: 3/4</strong></p>
+
+        <hr>
+
+        <h3>Example 2: Adding Fractions</h3>
+
+        <p><strong>Question:</strong> Calculate 2/3 + 1/6.</p>
+
+        <p><strong>Step 1:</strong> Find a common denominator.</p>
+
+        <p>The LCM of 3 and 6 is 6.</p>
+
+        <p><strong>Step 2:</strong> Convert the fractions.</p>
+
+        <p>2/3 = 4/6</p>
+
+        <p><strong>Step 3:</strong> Add.</p>
+
+        <p>4/6 + 1/6 = 5/6</p>
+
+        <p><strong>Answer: 5/6</strong></p>
+
+        <hr>
+
+        <h3>Example 3: Subtracting Fractions</h3>
+
+        <p><strong>Question:</strong> Calculate 5/6 − 1/4.</p>
+
+        <p><strong>Step 1:</strong> Find a common denominator.</p>
+
+        <p>The LCM of 6 and 4 is 12.</p>
+
+        <p><strong>Step 2:</strong> Convert the fractions.</p>
+
+        <p>5/6 = 10/12</p>
+
+        <p>1/4 = 3/12</p>
+
+        <p><strong>Step 3:</strong> Subtract.</p>
+
+        <p>10/12 − 3/12 = 7/12</p>
+
+        <p><strong>Answer: 7/12</strong></p>
+
+        <hr>
+
+        <h3>Example 4: Multiplying Fractions</h3>
+
+        <p><strong>Question:</strong> Calculate 3/5 × 10/9.</p>
+
+        <p><strong>Step 1:</strong> Multiply the numerators.</p>
+
+        <p>3 × 10 = 30</p>
+
+        <p><strong>Step 2:</strong> Multiply the denominators.</p>
+
+        <p>5 × 9 = 45</p>
+
+        <p><strong>Step 3:</strong> Simplify.</p>
+
+        <p>30/45 = 2/3</p>
+
+        <p><strong>Answer: 2/3</strong></p>
+
+        <hr>
+
+        <h3>Example 5: Dividing Fractions</h3>
+
+        <p><strong>Question:</strong> Calculate 3/4 ÷ 2/5.</p>
+
+        <p><strong>Step 1:</strong> Change division into multiplication by the reciprocal.</p>
+
+        <p>3/4 × 5/2</p>
+
+        <p><strong>Step 2:</strong> Multiply.</p>
+
+        <p>3 × 5 = 15</p>
+
+        <p>4 × 2 = 8</p>
+
+        <p>15/8 = 1 7/8</p>
+
+        <p><strong>Answer: 1 7/8</strong></p>
+
+        <hr>
+
+        <h3>Example 6: Mixed Numbers</h3>
+
+        <p><strong>Question:</strong> Calculate 2 1/3 + 1 3/4.</p>
+
+        <p><strong>Step 1:</strong> Convert to improper fractions.</p>
+
+        <p>2 1/3 = 7/3</p>
+
+        <p>1 3/4 = 7/4</p>
+
+        <p><strong>Step 2:</strong> Find a common denominator.</p>
+
+        <p>The LCM of 3 and 4 is 12.</p>
+
+        <p>7/3 = 28/12</p>
+
+        <p>7/4 = 21/12</p>
+
+        <p><strong>Step 3:</strong> Add.</p>
+
+        <p>28/12 + 21/12 = 49/12</p>
+
+        <p><strong>Step 4:</strong> Convert to a mixed number.</p>
+
+        <p>49/12 = 4 1/12</p>
+
+        <p><strong>Answer: 4 1/12</strong></p>
+
+        <hr>
+
+        <h3>Example 7: Fraction of a Quantity</h3>
+
+        <p><strong>Question:</strong> Find 3/8 of 240.</p>
+
+        <p><strong>Step 1:</strong> Divide 240 by the denominator.</p>
+
+        <p>240 ÷ 8 = 30</p>
+
+        <p><strong>Step 2:</strong> Multiply by the numerator.</p>
+
+        <p>30 × 3 = 90</p>
+
+        <p><strong>Answer: 90</strong></p>
+
+        <hr>
+
+        <button onclick="openFractions()" style="margin-top: 20px; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+            ← Back to Fractions
+        </button>
+
+    </div>
+
+</div>
     <div id="integersPage" class="hidden" style="width: 100%; box-sizing: border-box;">
 
     <div class="content-card" style="width: 100%; box-sizing: border-box;">
@@ -1736,6 +1902,12 @@ function openFractionsNotes() {
     document.getElementById("standardFormPage").classList.add("hidden");
     document.getElementById("numberNotesPage").classList.add("hidden");
     document.getElementById("integersPage").classList.add("hidden");
+
+    window.scrollTo(0, 0);
+}
+function openFractionsExamples() {
+    document.getElementById("fractionsPage").classList.add("hidden");
+    document.getElementById("fractionsExamplesPage").classList.remove("hidden");
 
     window.scrollTo(0, 0);
 }
