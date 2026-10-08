@@ -503,7 +503,16 @@ footer {
         Open Fractions
     </button>
 </div>
+<div class="topic">
+    <h3>Decimals</h3>
+    <p>
+        Decimal place value, operations, rounding and conversions.
+    </p>
 
+    <button class="btn" onclick="openDecimals()">
+        Open Decimals
+    </button>
+</div>
 <div class="topic">
     <h3>Decimals</h3>
     <p>
@@ -1803,6 +1812,47 @@ footer {
     </div>
 
 </div>
+    <div id="decimalsPage" class="hidden" style="width: 100%; box-sizing: border-box;">
+
+    <div class="content-card" style="width: 100%; box-sizing: border-box;">
+
+        <button onclick="openNumber()" style="display: block; margin-bottom: 20px; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+            ← Back to Number
+        </button>
+
+        <h2>Decimals</h2>
+
+        <p>
+            Choose a section below to study Decimals.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 25px;">
+
+            <button class="btn" onclick="openDecimalsNotes()">
+                📘 Revision Notes
+            </button>
+
+            <button class="btn" onclick="openDecimalsExamples()">
+                ✏️ Worked Examples
+            </button>
+
+            <button class="btn" onclick="openDecimalsPractice()">
+                📝 Practice Questions
+            </button>
+
+            <button class="btn" onclick="openDecimalsExam()">
+                🎯 Exam-Style Questions
+            </button>
+
+            <button class="btn" onclick="openDecimalsQuickCheck()">
+                ✅ Quick Check
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
     <div id="integersPage" class="hidden" style="width: 100%; box-sizing: border-box;">
 
     <div class="content-card" style="width: 100%; box-sizing: border-box;">
@@ -2147,6 +2197,7 @@ function openNumber() {
     document.getElementById("numberPracticeQuestionsPage").classList.add("hidden");
     document.getElementById("numberExamQuestionsPage").classList.add("hidden");
     document.getElementById("integersPage").classList.add("hidden");
+    document.getElementById("decimalsPage").classList.add("hidden");
 
     document.getElementById("fractionsPage").classList.add("hidden");
     document.getElementById("fractionsNotesPage").classList.add("hidden");
@@ -2154,6 +2205,12 @@ function openNumber() {
     document.getElementById("fractionsPracticePage").classList.add("hidden");
     document.getElementById("fractionsExamPage").classList.add("hidden");
     document.getElementById("fractionsQuickCheckPage").classList.add("hidden");
+
+    window.scrollTo(0, 0);
+}
+function openDecimals() {
+    document.getElementById("numberPage").classList.add("hidden");
+    document.getElementById("decimalsPage").classList.remove("hidden");
 
     window.scrollTo(0, 0);
 }
