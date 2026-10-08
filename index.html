@@ -1728,6 +1728,81 @@ footer {
     </div>
 
 </div>
+    <div id="fractionsQuickCheckPage" class="hidden" style="width: 100%; box-sizing: border-box;">
+
+    <div class="content-card" style="width: 100%; box-sizing: border-box;">
+
+        <button onclick="openFractions()" style="margin-bottom: 20px; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+            ← Back to Fractions
+        </button>
+
+        <h2>Fractions — Quick Check</h2>
+
+        <p>
+            Test yourself with these short questions.
+            Try to answer each one before revealing the answers.
+        </p>
+
+        <hr>
+
+        <h3>Question 1</h3>
+        <p>What is <strong>3/4 + 1/8</strong>?</p>
+
+        <hr>
+
+        <h3>Question 2</h3>
+        <p>Simplify <strong>24/36</strong>.</p>
+
+        <hr>
+
+        <h3>Question 3</h3>
+        <p>Calculate <strong>2/3 × 9/10</strong>.</p>
+
+        <hr>
+
+        <h3>Question 4</h3>
+        <p>Calculate <strong>3/4 ÷ 1/2</strong>.</p>
+
+        <hr>
+
+        <h3>Question 5</h3>
+        <p>Find <strong>5/8 of 64</strong>.</p>
+
+        <hr>
+
+        <h3>Question 6</h3>
+        <p>
+            Which is larger: <strong>5/6</strong> or <strong>3/4</strong>?
+        </p>
+
+        <hr>
+
+        <h3>Answers</h3>
+
+        <details>
+
+            <summary style="cursor: pointer; font-weight: bold; padding: 10px;">
+                Click here to reveal the answers
+            </summary>
+
+            <ol>
+                <li>7/8</li>
+                <li>2/3</li>
+                <li>3/5</li>
+                <li>3/2 = 1 1/2</li>
+                <li>40</li>
+                <li>5/6</li>
+            </ol>
+
+        </details>
+
+        <button onclick="openFractions()" style="margin-top: 20px; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+            ← Back to Fractions
+        </button>
+
+    </div>
+
+</div>
     <div id="integersPage" class="hidden" style="width: 100%; box-sizing: border-box;">
 
     <div class="content-card" style="width: 100%; box-sizing: border-box;">
@@ -2153,6 +2228,12 @@ function openFractionsPractice() {
 function openFractionsExam() {
     document.getElementById("fractionsPage").classList.add("hidden");
     document.getElementById("fractionsExamPage").classList.remove("hidden");
+
+    window.scrollTo(0, 0);
+}
+function openFractionsQuickCheck() {
+    document.getElementById("fractionsPage").classList.add("hidden");
+    document.getElementById("fractionsQuickCheckPage").classList.remove("hidden");
 
     window.scrollTo(0, 0);
 }
