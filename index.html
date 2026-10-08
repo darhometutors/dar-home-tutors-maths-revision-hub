@@ -2016,6 +2016,204 @@ footer {
     </div>
 
 </div>
+    <div id="decimalsExamplesPage" class="hidden" style="width: 100%; box-sizing: border-box;">
+
+    <div class="content-card" style="width: 100%; box-sizing: border-box;">
+
+        <button onclick="openDecimals()" style="margin-bottom: 20px; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+            ← Back to Decimals
+        </button>
+
+        <h2>Decimals — Worked Examples</h2>
+
+        <p>
+            Study these examples carefully and follow each step.
+        </p>
+
+        <hr>
+
+        <h3>Example 1: Adding Decimals</h3>
+
+        <p><strong>Calculate:</strong> 12.45 + 3.7</p>
+
+        <p>
+            Write the numbers with the decimal points aligned:
+        </p>
+
+        <p><strong>12.45</strong><br>
+        <strong>+ 3.70</strong></p>
+
+        <p>
+            Add:
+        </p>
+
+        <p><strong>12.45 + 3.70 = 16.15</strong></p>
+
+        <p><strong>Answer: 16.15</strong></p>
+
+        <hr>
+
+        <h3>Example 2: Subtracting Decimals</h3>
+
+        <p><strong>Calculate:</strong> 8.6 − 2.35</p>
+
+        <p>
+            Write 8.6 as 8.60:
+        </p>
+
+        <p><strong>8.60 − 2.35 = 6.25</strong></p>
+
+        <p><strong>Answer: 6.25</strong></p>
+
+        <hr>
+
+        <h3>Example 3: Multiplying Decimals</h3>
+
+        <p><strong>Calculate:</strong> 2.4 × 0.5</p>
+
+        <p>
+            Ignore the decimal points first:
+        </p>
+
+        <p><strong>24 × 5 = 120</strong></p>
+
+        <p>
+            There are two decimal places altogether, so place the decimal
+            point two places from the right:
+        </p>
+
+        <p><strong>120 → 1.20</strong></p>
+
+        <p><strong>Answer: 1.2</strong></p>
+
+        <hr>
+
+        <h3>Example 4: Dividing by a Decimal</h3>
+
+        <p><strong>Calculate:</strong> 4.8 ÷ 0.6</p>
+
+        <p>
+            Multiply both numbers by 10:
+        </p>
+
+        <p><strong>4.8 ÷ 0.6 = 48 ÷ 6</strong></p>
+
+        <p>
+            Therefore:
+        </p>
+
+        <p><strong>48 ÷ 6 = 8</strong></p>
+
+        <p><strong>Answer: 8</strong></p>
+
+        <hr>
+
+        <h3>Example 5: Rounding to Decimal Places</h3>
+
+        <p><strong>Round 7.386 to 2 decimal places.</strong></p>
+
+        <p>
+            The second decimal place is 8.
+            Look at the next digit, which is 6.
+        </p>
+
+        <p>
+            Since 6 is 5 or more, increase the 8 by 1.
+        </p>
+
+        <p><strong>7.386 → 7.39</strong></p>
+
+        <p><strong>Answer: 7.39</strong></p>
+
+        <hr>
+
+        <h3>Example 6: Decimal to Fraction</h3>
+
+        <p><strong>Convert 0.75 to a fraction.</strong></p>
+
+        <p>
+            0.75 means 75 hundredths:
+        </p>
+
+        <p><strong>0.75 = 75/100</strong></p>
+
+        <p>
+            Simplify by dividing the numerator and denominator by 25:
+        </p>
+
+        <p><strong>75/100 = 3/4</strong></p>
+
+        <p><strong>Answer: 3/4</strong></p>
+
+        <hr>
+
+        <h3>Example 7: Decimal to Percentage</h3>
+
+        <p><strong>Convert 0.35 to a percentage.</strong></p>
+
+        <p>
+            Multiply the decimal by 100:
+        </p>
+
+        <p><strong>0.35 × 100 = 35</strong></p>
+
+        <p>
+            Add the percentage sign:
+        </p>
+
+        <p><strong>Answer: 35%</strong></p>
+
+        <hr>
+
+        <h3>Example 8: Percentage to Decimal</h3>
+
+        <p><strong>Convert 62% to a decimal.</strong></p>
+
+        <p>
+            Divide by 100:
+        </p>
+
+        <p><strong>62 ÷ 100 = 0.62</strong></p>
+
+        <p><strong>Answer: 0.62</strong></p>
+
+        <hr>
+
+        <h3>Example 9: Comparing Decimals</h3>
+
+        <p><strong>Which is greater: 0.7 or 0.65?</strong></p>
+
+        <p>
+            Write 0.7 as 0.70:
+        </p>
+
+        <p><strong>0.70 &gt; 0.65</strong></p>
+
+        <p><strong>Answer: 0.7 is greater.</strong></p>
+
+        <hr>
+
+        <h3>Example 10: Decimal of a Quantity</h3>
+
+        <p><strong>Find 0.4 of 250.</strong></p>
+
+        <p>
+            Multiply:
+        </p>
+
+        <p><strong>0.4 × 250 = 100</strong></p>
+
+        <p><strong>Answer: 100</strong></p>
+
+        <hr>
+
+        <button onclick="openDecimals()" style="margin-top: 20px; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+            ← Back to Decimals
+        </button>
+
+    </div>
+
+</div>
     <div id="integersPage" class="hidden" style="width: 100%; box-sizing: border-box;">
 
     <div class="content-card" style="width: 100%; box-sizing: border-box;">
@@ -2388,6 +2586,12 @@ function openStandardForm() {
     function openDecimalsNotes() {
     document.getElementById("decimalsPage").classList.add("hidden");
     document.getElementById("decimalsNotesPage").classList.remove("hidden");
+
+    window.scrollTo(0, 0);
+}
+function openDecimalsExamples() {
+    document.getElementById("decimalsPage").classList.add("hidden");
+    document.getElementById("decimalsExamplesPage").classList.remove("hidden");
 
     window.scrollTo(0, 0);
 }
