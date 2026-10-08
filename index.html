@@ -1991,8 +1991,20 @@ function openFractions() {
     window.scrollTo(0, 0);
 }
 function openFractionsNotes() {
+    document.getElementById("homePage").classList.add("hidden");
+    document.getElementById("igcsePage").classList.add("hidden");
+    document.getElementById("year10Page").classList.add("hidden");
+    document.getElementById("numberPage").classList.add("hidden");
+
     document.getElementById("fractionsPage").classList.add("hidden");
     document.getElementById("fractionsNotesPage").classList.remove("hidden");
+
+    document.getElementById("numberWorkedExamplesPage").classList.add("hidden");
+    document.getElementById("numberPracticeQuestionsPage").classList.add("hidden");
+    document.getElementById("numberExamQuestionsPage").classList.add("hidden");
+    document.getElementById("standardFormPage").classList.add("hidden");
+    document.getElementById("numberNotesPage").classList.add("hidden");
+    document.getElementById("integersPage").classList.add("hidden");
 
     window.scrollTo(0, 0);
 }
