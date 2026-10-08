@@ -1881,8 +1881,33 @@ function openStandardForm() {
 
     window.scrollTo(0, 0);
 }
+
 function openFractions() {
-    document.getElementById("numberPage").classList.add("hidden");
+    const pageIds = [
+        "homePage",
+        "igcsePage",
+        "year10Page",
+        "numberPage",
+        "standardFormPage",
+        "numberNotesPage",
+        "numberWorkedExamplesPage",
+        "numberPracticeQuestionsPage",
+        "numberExamQuestionsPage",
+        "integersPage",
+        "fractionsNotesPage",
+        "fractionsExamplesPage",
+        "fractionsPracticePage",
+        "fractionsExamPage",
+        "fractionsQuickCheckPage"
+    ];
+
+    pageIds.forEach(function(id) {
+        const page = document.getElementById(id);
+        if (page) {
+            page.classList.add("hidden");
+        }
+    });
+
     document.getElementById("fractionsPage").classList.remove("hidden");
 
     window.scrollTo(0, 0);
