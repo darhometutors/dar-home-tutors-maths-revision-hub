@@ -1853,6 +1853,169 @@ footer {
     </div>
 
 </div>
+    <div id="decimalsNotesPage" class="hidden" style="width: 100%; box-sizing: border-box;">
+
+    <div class="content-card" style="width: 100%; box-sizing: border-box;">
+
+        <button onclick="openDecimals()" style="margin-bottom: 20px; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+            ← Back to Decimals
+        </button>
+
+        <h2>Decimals — Revision Notes</h2>
+
+        <p>
+            Use these notes to revise the key ideas and skills involving decimals.
+        </p>
+
+        <hr>
+
+        <h3>1. Place Value</h3>
+
+        <p>
+            Each digit in a decimal number has a place value.
+        </p>
+
+        <p>
+            Example: <strong>4.735</strong>
+        </p>
+
+        <p>
+            4 is the units digit.<br>
+            7 is the tenths digit.<br>
+            3 is the hundredths digit.<br>
+            5 is the thousandths digit.
+        </p>
+
+        <hr>
+
+        <h3>2. Comparing Decimals</h3>
+
+        <p>
+            To compare decimals, compare the digits from left to right.
+        </p>
+
+        <p>
+            Example:
+            <strong>0.7 &gt; 0.65</strong>
+        </p>
+
+        <p>
+            We can write 0.7 as 0.70, so 0.70 is greater than 0.65.
+        </p>
+
+        <hr>
+
+        <h3>3. Adding and Subtracting Decimals</h3>
+
+        <p>
+            Line up the decimal points before adding or subtracting.
+        </p>
+
+        <p>
+            Example:
+            <strong>12.45 + 3.7 = 16.15</strong>
+        </p>
+
+        <p>
+            Example:
+            <strong>8.6 − 2.35 = 6.25</strong>
+        </p>
+
+        <hr>
+
+        <h3>4. Multiplying Decimals</h3>
+
+        <p>
+            Multiply the numbers first, then place the decimal point correctly.
+        </p>
+
+        <p>
+            Example:
+            <strong>2.4 × 0.5 = 1.2</strong>
+        </p>
+
+        <hr>
+
+        <h3>5. Dividing Decimals</h3>
+
+        <p>
+            When dividing by a decimal, you can multiply both numbers by
+            10, 100 or another power of 10 to make the divisor a whole number.
+        </p>
+
+        <p>
+            Example:
+            <strong>4.8 ÷ 0.6 = 48 ÷ 6 = 8</strong>
+        </p>
+
+        <hr>
+
+        <h3>6. Rounding Decimals</h3>
+
+        <p>
+            Look at the digit immediately after the place you are rounding to.
+        </p>
+
+        <p>
+            If it is 5 or more, round up.
+            If it is less than 5, keep the digit unchanged.
+        </p>
+
+        <p>
+            Example:
+            <strong>7.386</strong> rounded to 2 decimal places is
+            <strong>7.39</strong>.
+        </p>
+
+        <hr>
+
+        <h3>7. Decimal and Fraction Conversions</h3>
+
+        <p>
+            Terminating decimals can be written as fractions.
+        </p>
+
+        <p>
+            Example:
+            <strong>0.75 = 75/100 = 3/4</strong>
+        </p>
+
+        <p>
+            Example:
+            <strong>0.4 = 4/10 = 2/5</strong>
+        </p>
+
+        <hr>
+
+        <h3>8. Decimal and Percentage Conversions</h3>
+
+        <p>
+            To convert a decimal to a percentage, multiply by 100.
+        </p>
+
+        <p>
+            Example:
+            <strong>0.35 = 35%</strong>
+        </p>
+
+        <p>
+            To convert a percentage to a decimal, divide by 100.
+        </p>
+
+        <p>
+            Example:
+            <strong>62% = 0.62</strong>
+        </p>
+
+        <hr>
+
+        <button onclick="openDecimals()" style="margin-top: 20px; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+            ← Back to Decimals
+        </button>
+
+    </div>
+
+</div>
     <div id="integersPage" class="hidden" style="width: 100%; box-sizing: border-box;">
 
     <div class="content-card" style="width: 100%; box-sizing: border-box;">
@@ -2198,6 +2361,7 @@ function openNumber() {
     document.getElementById("numberExamQuestionsPage").classList.add("hidden");
     document.getElementById("integersPage").classList.add("hidden");
     document.getElementById("decimalsPage").classList.add("hidden");
+    document.getElementById("decimalsNotesPage").classList.add("hidden");
 
     document.getElementById("fractionsPage").classList.add("hidden");
     document.getElementById("fractionsNotesPage").classList.add("hidden");
@@ -2217,6 +2381,12 @@ function openDecimals() {
 function openStandardForm() {
     document.getElementById("numberPage").classList.add("hidden");
     document.getElementById("standardFormPage").classList.remove("hidden");
+
+    window.scrollTo(0, 0);
+}
+    function openDecimalsNotes() {
+    document.getElementById("decimalsPage").classList.add("hidden");
+    document.getElementById("decimalsNotesPage").classList.remove("hidden");
 
     window.scrollTo(0, 0);
 }
