@@ -2973,6 +2973,7 @@ function openDecimals() {
     document.getElementById("decimalsPracticePage").classList.add("hidden");
     document.getElementById("decimalsExamPage").classList.add("hidden");
     document.getElementById("decimalsQuickCheckPage").classList.add("hidden");
+    document.getElementById("decimalsQuickCheckPage").classList.add("hidden");
 
     window.scrollTo(0, 0);
 }
@@ -3062,6 +3063,13 @@ function checkDecimalsQuiz() {
                 : "Keep practising. Review the notes and worked examples, then try again.");
 
     result.style.color = score >= 6 ? "#15803d" : "#b91c1c";
+}
+
+function openDecimalsQuickCheck() {
+    document.getElementById("decimalsPage").classList.add("hidden");
+    document.getElementById("decimalsQuickCheckPage").classList.remove("hidden");
+
+    window.scrollTo(0, 0);
 }
     function openIntegers() {
     document.getElementById("numberPage").classList.add("hidden");
