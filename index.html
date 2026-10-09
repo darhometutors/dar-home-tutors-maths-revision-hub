@@ -2509,6 +2509,106 @@ footer {
     </div>
 
 </div>
+    
+<div id="decimalsQuickCheckPage" class="hidden" style="width: 100%; box-sizing: border-box;">
+
+    <div class="content-card" style="width: 100%; box-sizing: border-box;">
+
+        <button onclick="openDecimals()" style="margin-bottom: 20px; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+            ← Back to Decimals
+        </button>
+
+        <h2>Decimals — Quick Check</h2>
+
+        <p>Answer all 8 questions, then click <strong>Check My Answers</strong>.</p>
+
+        <hr>
+
+        <form id="decimalsQuizForm">
+
+            <h3>Question 1</h3>
+            <p>What is the value of the digit 7 in 3.472?</p>
+            <label><input type="radio" name="dq1" value="a"> 7 tenths</label><br>
+            <label><input type="radio" name="dq1" value="b"> 7 hundredths</label><br>
+            <label><input type="radio" name="dq1" value="c"> 7 thousandths</label><br>
+
+            <hr>
+
+            <h3>Question 2</h3>
+            <p>Calculate 4.75 + 2.6.</p>
+            <label><input type="radio" name="dq2" value="a"> 6.35</label><br>
+            <label><input type="radio" name="dq2" value="b"> 7.35</label><br>
+            <label><input type="radio" name="dq2" value="c"> 7.25</label><br>
+
+            <hr>
+
+            <h3>Question 3</h3>
+            <p>Calculate 10 − 3.86.</p>
+            <label><input type="radio" name="dq3" value="a"> 6.24</label><br>
+            <label><input type="radio" name="dq3" value="b"> 7.14</label><br>
+            <label><input type="radio" name="dq3" value="c"> 6.14</label><br>
+
+            <hr>
+
+            <h3>Question 4</h3>
+            <p>Calculate 0.6 × 0.4.</p>
+            <label><input type="radio" name="dq4" value="a"> 2.4</label><br>
+            <label><input type="radio" name="dq4" value="b"> 0.24</label><br>
+            <label><input type="radio" name="dq4" value="c"> 0.024</label><br>
+
+            <hr>
+
+            <h3>Question 5</h3>
+            <p>Calculate 6.3 ÷ 0.7.</p>
+            <label><input type="radio" name="dq5" value="a"> 0.9</label><br>
+            <label><input type="radio" name="dq5" value="b"> 90</label><br>
+            <label><input type="radio" name="dq5" value="c"> 9</label><br>
+
+            <hr>
+
+            <h3>Question 6</h3>
+            <p>Round 5.678 to 2 decimal places.</p>
+            <label><input type="radio" name="dq6" value="a"> 5.67</label><br>
+            <label><input type="radio" name="dq6" value="b"> 5.68</label><br>
+            <label><input type="radio" name="dq6" value="c"> 5.70</label><br>
+
+            <hr>
+
+            <h3>Question 7</h3>
+            <p>Convert 0.45 to a percentage.</p>
+            <label><input type="radio" name="dq7" value="a"> 4.5%</label><br>
+            <label><input type="radio" name="dq7" value="b"> 450%</label><br>
+            <label><input type="radio" name="dq7" value="c"> 45%</label><br>
+
+            <hr>
+
+            <h3>Question 8</h3>
+            <p>Find 0.25 of 160.</p>
+            <label><input type="radio" name="dq8" value="a"> 40</label><br>
+            <label><input type="radio" name="dq8" value="b"> 4</label><br>
+            <label><input type="radio" name="dq8" value="c"> 64</label><br>
+
+            <hr>
+
+            <button type="button" class="btn" onclick="checkDecimalsQuiz()">
+                Check My Answers
+            </button>
+
+            <button type="reset" class="btn" onclick="document.getElementById('decimalsQuizResult').innerHTML = ''">
+                Try Again
+            </button>
+
+        </form>
+
+        <div id="decimalsQuizResult" style="margin-top: 20px; font-size: 18px; font-weight: bold;"></div>
+
+        <button onclick="openDecimals()" style="margin-top: 20px; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+            ← Back to Decimals
+        </button>
+
+    </div>
+
+</div>
     <div id="integersPage" class="hidden" style="width: 100%; box-sizing: border-box;">
 
     <div class="content-card" style="width: 100%; box-sizing: border-box;">
@@ -2872,6 +2972,7 @@ function openDecimals() {
     document.getElementById("decimalsExamplesPage").classList.add("hidden");
     document.getElementById("decimalsPracticePage").classList.add("hidden");
     document.getElementById("decimalsExamPage").classList.add("hidden");
+    document.getElementById("decimalsQuickCheckPage").classList.add("hidden");
 
     window.scrollTo(0, 0);
 }
@@ -2904,6 +3005,63 @@ function openDecimalsExam() {
     document.getElementById("decimalsExamPage").classList.remove("hidden");
 
     window.scrollTo(0, 0);
+}
+
+function openDecimalsQuickCheck() {
+    document.getElementById("decimalsPage").classList.add("hidden");
+    document.getElementById("decimalsQuickCheckPage").classList.remove("hidden");
+
+    window.scrollTo(0, 0);
+}
+
+function checkDecimalsQuiz() {
+    const answers = {
+        dq1: "b",
+        dq2: "b",
+        dq3: "c",
+        dq4: "b",
+        dq5: "c",
+        dq6: "b",
+        dq7: "c",
+        dq8: "a"
+    };
+
+    let score = 0;
+    let unanswered = 0;
+
+    for (let i = 1; i <= 8; i++) {
+        const questionName = "dq" + i;
+        const selected = document.querySelector(
+            'input[name="' + questionName + '"]:checked'
+        );
+
+        if (!selected) {
+            unanswered++;
+        } else if (selected.value === answers[questionName]) {
+            score++;
+        }
+    }
+
+    const result = document.getElementById("decimalsQuizResult");
+
+    if (unanswered > 0) {
+        result.innerHTML =
+            "Please answer all 8 questions before checking. " +
+            unanswered + " question(s) remain unanswered.";
+        result.style.color = "#b45309";
+        return;
+    }
+
+    result.innerHTML =
+        "Your score: " + score + " / 8" +
+        "<br>" +
+        (score === 8
+            ? "Excellent! You got every question correct."
+            : score >= 6
+                ? "Very good! Review any questions you missed."
+                : "Keep practising. Review the notes and worked examples, then try again.");
+
+    result.style.color = score >= 6 ? "#15803d" : "#b91c1c";
 }
     function openIntegers() {
     document.getElementById("numberPage").classList.add("hidden");
