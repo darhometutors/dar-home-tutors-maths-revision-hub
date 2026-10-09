@@ -2364,6 +2364,151 @@ footer {
     </div>
 
 </div>
+    
+<div id="decimalsExamPage" class="hidden" style="width: 100%; box-sizing: border-box;">
+
+    <div class="content-card" style="width: 100%; box-sizing: border-box;">
+
+        <button onclick="openDecimals()" style="margin-bottom: 20px; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+            ← Back to Decimals
+        </button>
+
+        <h2>Decimals — Exam-Style Questions</h2>
+
+        <p>Attempt each question before revealing the worked answer.</p>
+
+        <hr>
+
+        <h3>Question 1: Addition and Subtraction (4 marks)</h3>
+
+        <p>
+            Calculate:
+            <br>(a) 18.75 + 6.408
+            <br>(b) 25 − 9.675
+        </p>
+
+        <details>
+            <summary>Show worked answers</summary>
+            <p><strong>(a)</strong> 18.750 + 6.408 = <strong>25.158</strong></p>
+            <p><strong>(b)</strong> 25.000 − 9.675 = <strong>15.325</strong></p>
+        </details>
+
+        <hr>
+
+        <h3>Question 2: Multiplication (2 marks)</h3>
+
+        <p>Calculate 3.25 × 1.6.</p>
+
+        <details>
+            <summary>Show worked answer</summary>
+            <p>325 × 16 = 5200.</p>
+            <p>There are three decimal places altogether.</p>
+            <p><strong>Answer: 5.200 = 5.2</strong></p>
+        </details>
+
+        <hr>
+
+        <h3>Question 3: Division (2 marks)</h3>
+
+        <p>Calculate 8.64 ÷ 0.12.</p>
+
+        <details>
+            <summary>Show worked answer</summary>
+            <p>Multiply both numbers by 100:</p>
+            <p>8.64 ÷ 0.12 = 864 ÷ 12</p>
+            <p><strong>Answer: 72</strong></p>
+        </details>
+
+        <hr>
+
+        <h3>Question 4: Rounding (3 marks)</h3>
+
+        <p>
+            (a) Round 46.785 to 2 decimal places.
+            <br>(b) Round 0.006748 to 3 significant figures.
+        </p>
+
+        <details>
+            <summary>Show worked answers</summary>
+            <p><strong>(a)</strong> The third decimal digit is 5, so 46.78 rounds to <strong>46.79</strong>.</p>
+            <p><strong>(b)</strong> The first three significant digits are 6, 7 and 4. The next digit is 8, so the 4 rounds up.</p>
+            <p><strong>Answer: 0.00675</strong></p>
+        </details>
+
+        <hr>
+
+        <h3>Question 5: Fraction and Percentage Conversion (4 marks)</h3>
+
+        <p>
+            (a) Convert 0.875 to a fraction in its simplest form.
+            <br>(b) Convert 0.064 to a percentage.
+            <br>(c) Convert 72% to a decimal.
+        </p>
+
+        <details>
+            <summary>Show worked answers</summary>
+            <p><strong>(a)</strong> 0.875 = 875/1000 = <strong>7/8</strong>.</p>
+            <p><strong>(b)</strong> 0.064 × 100 = <strong>6.4%</strong>.</p>
+            <p><strong>(c)</strong> 72 ÷ 100 = <strong>0.72</strong>.</p>
+        </details>
+
+        <hr>
+
+        <h3>Question 6: Money Problem (3 marks)</h3>
+
+        <p>
+            A student buys 3 notebooks costing 2.75 each and a pen costing 1.80.
+            The student pays 15.00. Calculate the change.
+        </p>
+
+        <details>
+            <summary>Show worked answer</summary>
+            <p>Cost of notebooks = 3 × 2.75 = 8.25.</p>
+            <p>Total cost = 8.25 + 1.80 = 10.05.</p>
+            <p>Change = 15.00 − 10.05.</p>
+            <p><strong>Answer: 4.95</strong> in the same currency.</p>
+        </details>
+
+        <hr>
+
+        <h3>Question 7: Percentage of a Quantity (3 marks)</h3>
+
+        <p>
+            A school has 480 students. 0.35 of the students participate in sports.
+            Calculate the number who participate and the number who do not.
+        </p>
+
+        <details>
+            <summary>Show worked answer</summary>
+            <p>Participating students = 0.35 × 480 = <strong>168</strong>.</p>
+            <p>Non-participating students = 480 − 168 = <strong>312</strong>.</p>
+        </details>
+
+        <hr>
+
+        <h3>Question 8: Comparing and Ordering (3 marks)</h3>
+
+        <p>
+            Arrange these numbers in descending order:
+            <br>0.709, 0.79, 0.707, 0.7
+        </p>
+
+        <details>
+            <summary>Show worked answer</summary>
+            <p>Write each number to three decimal places:</p>
+            <p>0.709, 0.790, 0.707, 0.700</p>
+            <p><strong>Answer: 0.79, 0.709, 0.707, 0.7</strong></p>
+        </details>
+
+        <hr>
+
+        <button onclick="openDecimals()" style="margin-top: 20px; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+            ← Back to Decimals
+        </button>
+
+    </div>
+
+</div>
     <div id="integersPage" class="hidden" style="width: 100%; box-sizing: border-box;">
 
     <div class="content-card" style="width: 100%; box-sizing: border-box;">
@@ -2750,6 +2895,12 @@ function openDecimalsExamples() {
 function openDecimalsPractice() {
     document.getElementById("decimalsPage").classList.add("hidden");
     document.getElementById("decimalsPracticePage").classList.remove("hidden");
+
+    window.scrollTo(0, 0);
+}
+function openDecimalsExam() {
+    document.getElementById("decimalsPage").classList.add("hidden");
+    document.getElementById("decimalsExamPage").classList.remove("hidden");
 
     window.scrollTo(0, 0);
 }
