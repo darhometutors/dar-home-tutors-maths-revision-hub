@@ -477,7 +477,7 @@ footer {
     <p>
         Learn how to write very large and very small numbers in standard form.
     </p>
-    <button class="btn" onclick="openStandardForm()">
+    <button class="btn" onclick="openReusableTopic('standard-form')"
         Open Standard Form
     </button>
 </div>
@@ -3198,6 +3198,142 @@ function showMessage(curriculum) {
         " Mathematics selected.\n\n" +
         "This section will be added next."
     );
+}
+
+const reusableTopicLibrary = {
+    "standard-form": {
+        title: "Standard Form",
+        sections: {
+            notes: `
+                <h3>Revision Notes</h3>
+                <p>Standard form is used to write very large and very small numbers.</p>
+                <p>A number in standard form is written as <strong>a × 10ⁿ</strong>, where 1 ≤ a &lt; 10 and n is an integer.</p>
+                <p>Example: 4,500,000 = 4.5 × 10⁶</p>
+                <p>Example: 0.00072 = 7.2 × 10⁻⁴</p>
+            `,
+            examples: `
+                <h3>Worked Examples</h3>
+                <p><strong>Example 1:</strong> Write 6,300,000 in standard form.</p>
+                <p>Move the decimal point 6 places to the left.</p>
+                <p><strong>Answer: 6.3 × 10⁶</strong></p>
+                <hr>
+                <p><strong>Example 2:</strong> Write 0.00045 in standard form.</p>
+                <p>Move the decimal point 4 places to the right.</p>
+                <p><strong>Answer: 4.5 × 10⁻⁴</strong></p>
+            `,
+            practice: `
+                <h3>Practice Questions</h3>
+                <ol>
+                    <li>Write 8,200,000 in standard form.</li>
+                    <li>Write 0.00063 in standard form.</li>
+                    <li>Write 5.4 × 10⁴ as an ordinary number.</li>
+                </ol>
+                <details>
+                    <summary>Show answers</summary>
+                    <p>1. 8.2 × 10⁶</p>
+                    <p>2. 6.3 × 10⁻⁴</p>
+                    <p>3. 54,000</p>
+                </details>
+            `,
+            exam: `
+                <h3>Exam-Style Questions</h3>
+                <p><strong>1.</strong> Write 0.0000785 in standard form.</p>
+                <p><strong>2.</strong> Calculate (3 × 10⁵) × (2 × 10³), giving your answer in standard form.</p>
+                <details>
+                    <summary>Show worked answers</summary>
+                    <p>1. 7.85 × 10⁻⁵</p>
+                    <p>2. 6 × 10⁸</p>
+                </details>
+            `,
+            quick: `
+                <h3>Quick Check</h3>
+                <p>Try these questions before revealing the answers.</p>
+                <ol>
+                    <li>Write 720,000 in standard form.</li>
+                    <li>Write 9.1 × 10⁻³ as an ordinary number.</li>
+                </ol>
+                <details>
+                    <summary>Show answers</summary>
+                    <p>1. 7.2 × 10⁵</p>
+                    <p>2. 0.0091</p>
+                </details>
+            `
+        }
+    }
+};
+
+function openReusableTopic(topicKey) {
+    const topic = reusableTopicLibrary[topicKey];
+
+    if (!topic) {
+        alert("This topic has not been added to the topic library yet.");
+        return;
+    }
+
+    let page = document.getElementById("reusableTopicPage");
+
+    if (!page) {
+        page = document.createElement("div");
+        page.id = "reusableTopicPage";
+        page.className = "container";
+        page.style.background = "#ffffff";
+        page.style.padding = "25px";
+        page.style.borderRadius = "16px";
+        page.style.margin = "30px auto";
+        page.style.border = "1px solid #e4e9f0";
+
+        const footer = document.querySelector("footer");
+        footer.parentNode.insertBefore(page, footer);
+    }
+
+    document.getElementById("numberPage").classList.add("hidden");
+    document.getElementById("year10Page").classList.add("hidden");
+
+    page.classList.remove("hidden");
+
+    page.innerHTML = `
+        <button class="btn back-btn" onclick="closeReusableTopic()">
+            ← Back to Number
+        </button>
+
+        <h2 id="reusableTopicTitle"></h2>
+        <p>Choose a section to study this topic.</p>
+
+        <div class="topic-list" style="margin:20px 0;">
+            <button class="btn" onclick="showReusableSection('notes')">📘 Revision Notes</button>
+            <button class="btn" onclick="showReusableSection('examples')">✏️ Worked Examples</button>
+            <button class="btn" onclick="showReusableSection('practice')">📝 Practice Questions</button>
+            <button class="btn" onclick="showReusableSection('exam')">🎯 Exam-Style Questions</button>
+            <button class="btn" onclick="showReusableSection('quick')">✅ Quick Check</button>
+        </div>
+
+        <div id="reusableTopicContent" class="info" style="text-align:left;"></div>
+    `;
+
+    document.getElementById("reusableTopicTitle").textContent = topic.title;
+    showReusableSection("notes");
+    window.scrollTo(0, 0);
+}
+
+function showReusableSection(sectionKey) {
+    const topicKey = window.currentReusableTopic;
+    const topic = reusableTopicLibrary[topicKey];
+    window.currentReusableTopic = topicKey;
+
+    if (!topic || !topic.sections[sectionKey]) return;
+
+    document.getElementById("reusableTopicContent").innerHTML =
+        topic.sections[sectionKey];
+}
+
+function closeReusableTopic() {
+    const page = document.getElementById("reusableTopicPage");
+
+    if (page) {
+        page.classList.add("hidden");
+    }
+
+    openNumber();
 }
 
 </script>
