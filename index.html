@@ -3315,16 +3315,30 @@ function openReusableTopic(topicKey) {
     window.scrollTo(0, 0);
 }
 
+
 function showReusableSection(sectionKey) {
     const topicKey = window.currentReusableTopic;
     const topic = reusableTopicLibrary[topicKey];
-    window.currentReusableTopic = topicKey;
+    const content = document.getElementById("reusableTopicContent");
 
-    if (!topic || !topic.sections[sectionKey]) return;
+    if (!topic) {
+        alert("Topic not found: " + topicKey);
+        return;
+    }
 
-    document.getElementById("reusableTopicContent").innerHTML =
-        topic.sections[sectionKey];
+    if (!topic.sections[sectionKey]) {
+        alert("Section not found: " + sectionKey);
+        return;
+    }
+
+    if (!content) {
+        alert("The content area is missing.");
+        return;
+    }
+
+    content.innerHTML = topic.sections[sectionKey];
 }
+
 
 function closeReusableTopic() {
     const page = document.getElementById("reusableTopicPage");
