@@ -3264,6 +3264,7 @@ const reusableTopicLibrary = {
 
 function openReusableTopic(topicKey) {
     const topic = reusableTopicLibrary[topicKey];
+    window.currentReusableTopic = topicKey;
 
     if (!topic) {
         alert("This topic has not been added to the topic library yet.");
