@@ -492,7 +492,16 @@ footer {
     Open Integers
     </button>
 </div>
+<div class="topic-card">
+    <h3>Percentages</h3>
+    <p>
+        Understanding percentages, percentage change, profit, loss and applications.
+    </p>
 
+    <button class="btn" onclick="openReusableTopic('percentages')">
+        Open Percentages
+    </button>
+</div>
 <div class="topic">
     <h3>Fractions</h3>
     <p>
@@ -3328,9 +3337,110 @@ const reusableTopicLibrary = {
                     <p>4. -6</p>
                 </details>
             `
+
+        }
+    },
+
+    "percentages": {
+        title: "Percentages",
+        sections: {
+            notes: `
+                <h3>Revision Notes</h3>
+                <p>A percentage is a fraction expressed out of 100. The symbol % means per hundred.</p>
+                <p><strong>Converting:</strong></p>
+                <ul>
+                    <li>Fraction to percentage: multiply by 100%.</li>
+                    <li>Decimal to percentage: multiply by 100.</li>
+                    <li>Percentage to decimal: divide by 100.</li>
+                </ul>
+                <p><strong>Finding a percentage of an amount:</strong> Multiply the amount by the percentage divided by 100.</p>
+                <p><strong>Percentage increase:</strong> Add the percentage of the original amount.</p>
+                <p><strong>Percentage decrease:</strong> Subtract the percentage of the original amount.</p>
+                <p><strong>Percentage change:</strong></p>
+                <p>Percentage change = (Change ÷ Original value) × 100%</p>
+                <p><strong>Reverse percentages:</strong> Divide the final amount by the percentage multiplier to find the original amount.</p>
+            `,
+            examples: `
+                <h3>Worked Examples</h3>
+                <p><strong>Example 1: Convert 0.35 to a percentage.</strong></p>
+                <p>0.35 × 100 = 35%</p>
+                <p><strong>Example 2: Find 15% of 240.</strong></p>
+                <p>15/100 × 240 = 36</p>
+                <p><strong>Example 3: Increase 400 by 12%.</strong></p>
+                <p>12% of 400 = 48</p>
+                <p>400 + 48 = 448</p>
+                <p><strong>Example 4: Decrease 800 by 20%.</strong></p>
+                <p>20% of 800 = 160</p>
+                <p>800 - 160 = 640</p>
+                <p><strong>Example 5: A price increases from 50 to 65. Find the percentage increase.</strong></p>
+                <p>Change = 65 - 50 = 15</p>
+                <p>Percentage increase = (15/50) × 100 = 30%</p>
+                <p><strong>Example 6: After a 20% discount, an item costs 160. Find its original price.</strong></p>
+                <p>160 ÷ 0.8 = 200</p>
+            `,
+            practice: `
+                <h3>Practice Questions</h3>
+                <ol>
+                    <li>Convert 0.72 into a percentage.</li>
+                    <li>Convert 45% into a decimal.</li>
+                    <li>Find 25% of 360.</li>
+                    <li>Find 12% of 250.</li>
+                    <li>Increase 500 by 10%.</li>
+                    <li>Decrease 720 by 15%.</li>
+                    <li>Find the percentage increase from 80 to 100.</li>
+                    <li>Find the percentage decrease from 200 to 150.</li>
+                </ol>
+                <details>
+                    <summary>Show answers</summary>
+                    <p>1. 72%</p>
+                    <p>2. 0.45</p>
+                    <p>3. 90</p>
+                    <p>4. 30</p>
+                    <p>5. 550</p>
+                    <p>6. 612</p>
+                    <p>7. 25%</p>
+                    <p>8. 25%</p>
+                </details>
+            `,
+            exam: `
+                <h3>Exam-Style Questions</h3>
+                <p><strong>1.</strong> A school has 800 students. 35% are boys. Calculate the number of boys.</p>
+                <p><strong>2.</strong> A television costs TSh 600,000. Its price is increased by 8%. Calculate the new price.</p>
+                <p><strong>3.</strong> A shirt is reduced from TSh 80,000 to TSh 68,000. Calculate the percentage decrease.</p>
+                <p><strong>4.</strong> After a 15% discount, a bicycle costs TSh 170,000. Calculate its original price.</p>
+                <p><strong>5.</strong> A trader buys a bag for TSh 40,000 and sells it for TSh 50,000. Calculate the percentage profit.</p>
+                <details>
+                    <summary>Show worked answers</summary>
+                    <p>1. 35/100 × 800 = 280 boys.</p>
+                    <p>2. 600,000 × 1.08 = TSh 648,000.</p>
+                    <p>3. Change = 80,000 - 68,000 = 12,000. Percentage decrease = 12,000/80,000 × 100 = 15%.</p>
+                    <p>4. 170,000 ÷ 0.85 = TSh 200,000.</p>
+                    <p>5. Profit = 50,000 - 40,000 = 10,000. Percentage profit = 10,000/40,000 × 100 = 25%.</p>
+                </details>
+            `,
+            quick: `
+                <h3>Quick Check</h3>
+                <p>Try these questions.</p>
+                <ol>
+                    <li>Convert 0.08 into a percentage.</li>
+                    <li>Find 10% of 450.</li>
+                    <li>Increase 200 by 25%.</li>
+                    <li>Decrease 600 by 10%.</li>
+                    <li>Find 20% of 150.</li>
+                </ol>
+                <details>
+                    <summary>Show answers</summary>
+                    <p>1. 8%</p>
+                    <p>2. 45</p>
+                    <p>3. 250</p>
+                    <p>4. 540</p>
+                    <p>5. 30</p>
+                </details>
+            `
         }
     }
 };
+
 
 function openReusableTopic(topicKey) {
     const topic = reusableTopicLibrary[topicKey];
