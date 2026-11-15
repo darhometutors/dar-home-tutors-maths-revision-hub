@@ -502,6 +502,16 @@ footer {
         Open Percentages
     </button>
 </div>
+<div class="topic-card">
+    <h3>Indices</h3>
+    <p>
+        Laws of indices, zero and negative indices, fractional indices and calculations involving powers.
+    </p>
+
+    <button class="btn" onclick="openReusableTopic('indices')">
+        Open Indices
+    </button>
+</div>
 <div class="topic">
     <h3>Fractions</h3>
     <p>
@@ -3436,11 +3446,109 @@ const reusableTopicLibrary = {
                     <p>4. 540</p>
                     <p>5. 30</p>
                 </details>
+
+            `
+        }
+    },
+
+    "indices": {
+        title: "Indices",
+        sections: {
+            notes: `
+                <h3>Revision Notes</h3>
+                <p>An index (plural: indices) tells us how many times a number is multiplied by itself.</p>
+                <p>Example: 2³ = 2 × 2 × 2 = 8.</p>
+                <p><strong>Laws of indices:</strong></p>
+                <ul>
+                    <li>Multiplication: aᵐ × aⁿ = aᵐ⁺ⁿ</li>
+                    <li>Division: aᵐ ÷ aⁿ = aᵐ⁻ⁿ</li>
+                    <li>Power of a power: (aᵐ)ⁿ = aᵐⁿ</li>
+                    <li>Zero index: a⁰ = 1, where a ≠ 0</li>
+                    <li>Negative index: a⁻ⁿ = 1/aⁿ</li>
+                    <li>Fractional index: a¹/ⁿ = ⁿ√a</li>
+                    <li>aᵐ/ⁿ = (ⁿ√a)ᵐ</li>
+                </ul>
+                <p><strong>Important:</strong> The laws apply when the base is the same, unless otherwise stated.</p>
+            `,
+            examples: `
+                <h3>Worked Examples</h3>
+                <p><strong>Example 1:</strong> Simplify 3² × 3⁴.</p>
+                <p>= 3²⁺⁴ = 3⁶</p>
+                <p><strong>Example 2:</strong> Simplify 5⁷ ÷ 5³.</p>
+                <p>= 5⁷⁻³ = 5⁴ = 625</p>
+                <p><strong>Example 3:</strong> Simplify (2³)².</p>
+                <p>= 2³ˣ² = 2⁶ = 64</p>
+                <p><strong>Example 4:</strong> Evaluate 7⁰.</p>
+                <p>= 1</p>
+                <p><strong>Example 5:</strong> Evaluate 2⁻³.</p>
+                <p>= 1/2³ = 1/8</p>
+                <p><strong>Example 6:</strong> Evaluate 16¹/².</p>
+                <p>= √16 = 4</p>
+                <p><strong>Example 7:</strong> Evaluate 27²/³.</p>
+                <p>= (∛27)² = 3² = 9</p>
+            `,
+            practice: `
+                <h3>Practice Questions</h3>
+                <ol>
+                    <li>Simplify 2³ × 2⁵.</li>
+                    <li>Simplify 7⁶ ÷ 7².</li>
+                    <li>Simplify (3²)⁴.</li>
+                    <li>Evaluate 9⁰.</li>
+                    <li>Evaluate 4⁻².</li>
+                    <li>Evaluate 25¹/².</li>
+                    <li>Evaluate 8¹/³.</li>
+                    <li>Evaluate 32²/⁵.</li>
+                </ol>
+                <details>
+                    <summary>Show answers</summary>
+                    <p>1. 2⁸ = 256</p>
+                    <p>2. 7⁴ = 2401</p>
+                    <p>3. 3⁸ = 6561</p>
+                    <p>4. 1</p>
+                    <p>5. 1/16</p>
+                    <p>6. 5</p>
+                    <p>7. 2</p>
+                    <p>8. 4</p>
+                </details>
+            `,
+            exam: `
+                <h3>Exam-Style Questions</h3>
+                <p><strong>1.</strong> Simplify 4³ × 4⁵, giving your answer as a single power.</p>
+                <p><strong>2.</strong> Simplify (5²)³ ÷ 5⁴.</p>
+                <p><strong>3.</strong> Evaluate 64⁻¹/².</p>
+                <p><strong>4.</strong> Evaluate 81³/⁴.</p>
+                <p><strong>5.</strong> Given that 2ˣ × 2³ = 2⁹, find x.</p>
+                <details>
+                    <summary>Show worked answers</summary>
+                    <p>1. 4⁸</p>
+                    <p>2. 5⁶ ÷ 5⁴ = 5² = 25</p>
+                    <p>3. 1/√64 = 1/8</p>
+                    <p>4. (⁴√81)³ = 3³ = 27</p>
+                    <p>5. x + 3 = 9, so x = 6.</p>
+                </details>
+            `,
+            quick: `
+                <h3>Quick Check</h3>
+                <p>Try these questions.</p>
+                <ol>
+                    <li>2⁴ × 2²</li>
+                    <li>6⁵ ÷ 6³</li>
+                    <li>10⁰</li>
+                    <li>3⁻²</li>
+                    <li>49¹/²</li>
+                </ol>
+                <details>
+                    <summary>Show answers</summary>
+                    <p>1. 2⁶ = 64</p>
+                    <p>2. 6² = 36</p>
+                    <p>3. 1</p>
+                    <p>4. 1/9</p>
+                    <p>5. 7</p>
+                </details>
             `
         }
     }
 };
-
 
 function openReusableTopic(topicKey) {
     const topic = reusableTopicLibrary[topicKey];
