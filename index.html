@@ -343,6 +343,9 @@ footer {
 <div class="topic">
     <h3>Algebra</h3>
     <p>Expressions, equations, inequalities, sequences and algebraic manipulation.</p>
+    <button class="btn" onclick="openReusableTopic('algebra')">
+        Open Algebra
+    </button>
 </div>
 
 <div class="topic">
@@ -3701,6 +3704,121 @@ const reusableTopicLibrary = {
                     <p>3. 35 ≤ x &lt; 45</p>
                     <p>4. 3.495</p>
                     <p>5. 125 m</p>
+                </details>
+            `
+             }
+    },
+
+    "algebra": {
+        title: "Algebra",
+        sections: {
+            notes: `
+                <h3>Algebra Notes</h3>
+                <h4>1. Simplifying Expressions</h4>
+                <p>Collect like terms by adding or subtracting their coefficients.</p>
+                <p>Example: 3x + 5x - 2 = 8x - 2</p>
+
+                <h4>2. Expanding Brackets</h4>
+                <p>Multiply every term inside the bracket.</p>
+                <p>Example: 3(x + 4) = 3x + 12</p>
+
+                <h4>3. Factorisation</h4>
+                <p>Take out the highest common factor.</p>
+                <p>Example: 6x + 12 = 6(x + 2)</p>
+
+                <h4>4. Solving Linear Equations</h4>
+                <p>Use inverse operations to make the unknown the subject.</p>
+                <p>Example: 3x + 5 = 17</p>
+                <p>3x = 12, so x = 4.</p>
+
+                <h4>5. Inequalities</h4>
+                <p>Solve inequalities like equations. Reverse the inequality sign when multiplying or dividing by a negative number.</p>
+
+                <h4>6. Changing the Subject</h4>
+                <p>Rearrange a formula to make the required variable the subject.</p>
+                <p>Example: If y = 3x + 5, then x = (y - 5)/3.</p>
+            `,
+
+            examples: `
+                <h3>Worked Examples</h3>
+
+                <p><strong>1. Simplify:</strong> 5a + 3b - 2a + 4b</p>
+                <p>= 5a - 2a + 3b + 4b</p>
+                <p>= 3a + 7b</p>
+
+                <p><strong>2. Expand:</strong> 4(2x - 3)</p>
+                <p>= 8x - 12</p>
+
+                <p><strong>3. Factorise:</strong> 12x + 18</p>
+                <p>= 6(2x + 3)</p>
+
+                <p><strong>4. Solve:</strong> 5x - 7 = 18</p>
+                <p>5x = 25</p>
+                <p>x = 5</p>
+
+                <p><strong>5. Solve:</strong> 3(x + 2) = 21</p>
+                <p>3x + 6 = 21</p>
+                <p>3x = 15</p>
+                <p>x = 5</p>
+
+                <p><strong>6. Make x the subject:</strong> y = 4x + 8</p>
+                <p>y - 8 = 4x</p>
+                <p>x = (y - 8)/4</p>
+            `,
+
+            practice: `
+                <h3>Practice Questions</h3>
+                <ol>
+                    <li>Simplify 7x + 4x - 3x.</li>
+                    <li>Simplify 5a + 3b - 2a + 6b.</li>
+                    <li>Expand 5(x + 4).</li>
+                    <li>Expand 3(2x - 5).</li>
+                    <li>Factorise 8x + 20.</li>
+                    <li>Factorise 15a - 25.</li>
+                    <li>Solve 4x + 7 = 31.</li>
+                    <li>Solve 5x - 9 = 26.</li>
+                    <li>Solve 3(x - 2) = 18.</li>
+                    <li>Solve 2x + 5 &lt; 17.</li>
+                    <li>Make x the subject: y = 5x + 10.</li>
+                    <li>Make a the subject: P = 2a + 6.</li>
+                </ol>
+            `,
+
+            exam: `
+                <h3>Exam-Style Questions</h3>
+                <ol>
+                    <li>Simplify 4(2x - 3) + 3(x + 5).</li>
+                    <li>Expand and simplify (x + 3)(x + 5).</li>
+                    <li>Factorise x² + 7x + 12.</li>
+                    <li>Solve 3(2x - 1) = 4x + 9.</li>
+                    <li>Solve 5 - 2x &gt; 13.</li>
+                    <li>Make x the subject of y = (3x + 4)/5.</li>
+                    <li>The sum of three consecutive integers is 72. Form an equation and find the integers.</li>
+                    <li>A rectangle has length (x + 5) cm and width x cm. Its perimeter is 34 cm. Find x and the dimensions.</li>
+                </ol>
+            `,
+
+            quick: `
+                <h3>Quick Check</h3>
+                <p>Try these questions.</p>
+                <ol>
+                    <li>Simplify 9x - 4x + 2x.</li>
+                    <li>Expand 6(x - 3).</li>
+                    <li>Factorise 10x + 15.</li>
+                    <li>Solve 7x = 42.</li>
+                    <li>Solve 2x + 3 = 15.</li>
+                    <li>Solve 4x - 1 &gt; 11.</li>
+                    <li>Make x the subject: y = 2x + 6.</li>
+                </ol>
+                <details>
+                    <summary>Show answers</summary>
+                    <p>1. 7x</p>
+                    <p>2. 6x - 18</p>
+                    <p>3. 5(2x + 3)</p>
+                    <p>4. x = 6</p>
+                    <p>5. x = 6</p>
+                    <p>6. x &gt; 3</p>
+                    <p>7. x = (y - 6)/2</p>
                 </details>
             `
         }
