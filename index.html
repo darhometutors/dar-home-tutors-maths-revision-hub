@@ -548,6 +548,9 @@ footer {
     <p>
         Upper bounds, lower bounds and accuracy.
     </p>
+    <button class="btn" onclick="openReusableTopic('bounds')">
+        Open Bounds & Accuracy
+    </button>
 </div>
 
 </div>
@@ -3635,11 +3638,75 @@ const reusableTopicLibrary = {
                     <p>5. 12, 24 and 36</p>
                 </details>
             `
+                }
+    },
+
+    "bounds": {
+        title: "Bounds & Accuracy",
+        sections: {
+            notes: `
+                <h3>Bounds & Accuracy Notes</h3>
+                <p>Accuracy depends on the degree of rounding used.</p>
+                <p><strong>Lower bound:</strong> The smallest possible value that rounds to a given value.</p>
+                <p><strong>Upper bound:</strong> The largest possible value that rounds to a given value.</p>
+                <p>For a value rounded to the nearest whole number:</p>
+                <p>Lower bound = stated value − 0.5</p>
+                <p>Upper bound = stated value + 0.5</p>
+                <p>The upper bound is not included.</p>
+            `,
+            examples: `
+                <h3>Worked Examples</h3>
+                <p><strong>1.</strong> A length is 8 cm correct to the nearest centimetre.</p>
+                <p>Lower bound = 7.5 cm</p>
+                <p>Upper bound = 8.5 cm</p>
+                <p><strong>2.</strong> A mass is 4.6 kg correct to 1 decimal place.</p>
+                <p>Lower bound = 4.55 kg</p>
+                <p>Upper bound = 4.65 kg</p>
+                <p><strong>3.</strong> A distance is 320 m correct to the nearest 10 m.</p>
+                <p>Lower bound = 315 m</p>
+                <p>Upper bound = 325 m</p>
+            `,
+            practice: `
+                <h3>Practice Questions</h3>
+                <ol>
+                    <li>A length is 15 cm correct to the nearest centimetre. Find its lower and upper bounds.</li>
+                    <li>A mass is 7.3 kg correct to 1 decimal place. Find its bounds.</li>
+                    <li>A distance is 450 m correct to the nearest 10 m. Find its bounds.</li>
+                    <li>A number is 2.40 correct to 2 decimal places. Find its bounds.</li>
+                    <li>A time is 35 seconds correct to the nearest second. Find its bounds.</li>
+                </ol>
+            `,
+            exam: `
+                <h3>Exam-Style Questions</h3>
+                <ol>
+                    <li>A rectangle has length 12 cm and width 8 cm, each measured to the nearest centimetre. Find the lower and upper bounds for its area.</li>
+                    <li>A car travels 150 km, correct to the nearest 10 km, in 2 hours, correct to the nearest hour. Find the lower and upper bounds for its average speed.</li>
+                    <li>A square has a side length of 6.2 cm, correct to 1 decimal place. Calculate the lower and upper bounds for its area.</li>
+                </ol>
+            `,
+            quick: `
+                <h3>Quick Check</h3>
+                <p>Try these questions.</p>
+                <ol>
+                    <li>Find the lower bound of 25 cm correct to the nearest centimetre.</li>
+                    <li>Find the upper bound of 6.8 kg correct to 1 decimal place.</li>
+                    <li>Write the error interval for 40 correct to the nearest 10.</li>
+                    <li>Find the lower bound of 3.50 correct to 2 decimal places.</li>
+                    <li>Find the upper bound of 120 m correct to the nearest 10 m.</li>
+                </ol>
+                <details>
+                    <summary>Show answers</summary>
+                    <p>1. 24.5 cm</p>
+                    <p>2. 6.85 kg</p>
+                    <p>3. 35 ≤ x &lt; 45</p>
+                    <p>4. 3.495</p>
+                    <p>5. 125 m</p>
+                </details>
+            `
         }
     }
- 
-};
 
+};
 function openReusableTopic(topicKey) {
     const topic = reusableTopicLibrary[topicKey];
     window.currentReusableTopic = topicKey;
