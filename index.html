@@ -709,7 +709,75 @@ footer {
     </main>
 
 </div>
-    
+<!-- IGCSE GEOMETRY PAGE -->
+
+<div id="geometryPage" class="hidden">
+
+    <section class="hero">
+        <h2>IGCSE Mathematics — Geometry</h2>
+        <p>Develop your understanding of geometric shapes, angles and properties.</p>
+    </section>
+
+    <main class="container">
+
+        <button class="btn back-btn" onclick="openYear10()">
+            ← Back to IGCSE Mathematics
+        </button>
+
+        <div class="info">
+            <h2>Geometry Topics</h2>
+            <p>Choose a topic to access revision notes, worked examples and practice questions.</p>
+        </div>
+
+        <div class="topic-list">
+
+            <div class="topic">
+                <h3>Angles and Lines</h3>
+                <p>Angles on a straight line, around a point and vertically opposite angles.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Angles in Polygons</h3>
+                <p>Interior and exterior angles of regular and irregular polygons.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Triangles</h3>
+                <p>Properties of triangles, angle rules and special triangles.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Quadrilaterals</h3>
+                <p>Properties of squares, rectangles, parallelograms, rhombuses and trapeziums.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Circle Geometry</h3>
+                <p>Circle theorems, angles in circles and properties of chords and tangents.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Geometrical Constructions</h3>
+                <p>Constructing angles, perpendicular bisectors and angle bisectors.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Bearings</h3>
+                <p>Three-figure bearings and direction problems.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Similarity and Congruence</h3>
+                <p>Identifying similar and congruent shapes and using their properties.</p>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<!-- END IGCSE GEOMETRY PAGE -->   
 <!-- STANDARD FORM LESSON -->
 
 <!-- NUMBER REVISION NOTES PAGE -->
@@ -3088,6 +3156,7 @@ function openYear10() {
     document.getElementById("numberPage").classList.add("hidden");
     document.getElementById("algebraPage").classList.add("hidden");
     document.getElementById("graphsPage").classList.add("hidden");
+    document.getElementById("geometryPage").classList.add("hidden");
 
     document.getElementById("year10Page").classList.remove("hidden");
 
@@ -3145,7 +3214,17 @@ function openGraphs() {
 
     window.scrollTo(0, 0);
 }
-    
+function openGeometry() {
+    document.getElementById("homePage").classList.add("hidden");
+    document.getElementById("igcsePage").classList.add("hidden");
+    document.getElementById("year10Page").classList.add("hidden");
+    document.getElementById("numberPage").classList.add("hidden");
+    document.getElementById("algebraPage").classList.add("hidden");
+    document.getElementById("graphsPage").classList.add("hidden");
+    document.getElementById("geometryPage").classList.remove("hidden");
+
+    window.scrollTo(0, 0);
+}    
 function openDecimals() {
     document.getElementById("numberPage").classList.add("hidden");
     document.getElementById("decimalsPage").classList.remove("hidden");
