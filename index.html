@@ -331,6 +331,9 @@ footer {
 <div class="topic">
     <h3>Graphs & Functions</h3>
     <p>Coordinates, linear graphs, quadratic graphs and functions.</p>
+    <button class="btn" onclick="openGraphs()">
+        Open Graphs & Functions
+    </button>
 </div>
 
 <div class="topic">
@@ -641,6 +644,72 @@ footer {
     </main>
 
 </div>
+<div id="graphsPage" class="hidden">
+
+    <section class="hero">
+        <h2>IGCSE Mathematics — Graphs & Functions</h2>
+        <p>Select a topic below to begin your revision.</p>
+    </section>
+
+    <main class="container">
+
+        <button class="btn back-btn" onclick="openYear10()">
+            ← Back to IGCSE Mathematics
+        </button>
+
+        <div class="info">
+            <h2>Graphs & Functions Topics</h2>
+            <p>Choose a topic to access revision notes, worked examples and practice questions.</p>
+        </div>
+
+        <div class="topic-list">
+
+            <div class="topic">
+                <h3>Coordinates</h3>
+                <p>Plotting and reading coordinates on the Cartesian plane.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Linear Graphs</h3>
+                <p>Drawing and interpreting straight-line graphs.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Gradient and Intercepts</h3>
+                <p>Finding gradients and intercepts of straight lines.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Equations of Straight Lines</h3>
+                <p>Finding equations of straight lines using different methods.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Parallel and Perpendicular Lines</h3>
+                <p>Understanding gradients of parallel and perpendicular lines.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Quadratic Graphs</h3>
+                <p>Drawing and interpreting quadratic graphs.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Functions</h3>
+                <p>Function notation, domain, range and inverse functions.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Real-Life Graphs</h3>
+                <p>Distance-time graphs, speed-time graphs and practical applications.</p>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+    
 <!-- STANDARD FORM LESSON -->
 
 <!-- NUMBER REVISION NOTES PAGE -->
@@ -3064,6 +3133,17 @@ function openAlgebra() {
 
     window.scrollTo(0, 0);
 }
+function openGraphs() {
+    document.getElementById("homePage").classList.add("hidden");
+    document.getElementById("igcsePage").classList.add("hidden");
+    document.getElementById("year10Page").classList.add("hidden");
+    document.getElementById("numberPage").classList.add("hidden");
+    document.getElementById("algebraPage").classList.add("hidden");
+    document.getElementById("graphsPage").classList.remove("hidden");
+
+    window.scrollTo(0, 0);
+}
+    
 function openDecimals() {
     document.getElementById("numberPage").classList.add("hidden");
     document.getElementById("decimalsPage").classList.remove("hidden");
