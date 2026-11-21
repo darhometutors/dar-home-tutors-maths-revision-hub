@@ -362,7 +362,10 @@ footer {
 
 <div class="topic">
     <h3>Statistics</h3>
-    <p>Data representation, averages, spread and statistical diagrams.</p>
+    <p>Data collection, averages, charts, histograms and cumulative frequency.</p>
+    <button class="btn" onclick="openStatistics()">
+        Open Statistics
+    </button>
 </div>
 
 <div class="topic">
@@ -930,6 +933,85 @@ footer {
 </div>
 
 <!-- END IGCSE TRIGONOMETRY PAGE -->
+<!-- IGCSE STATISTICS PAGE -->
+
+<div id="statisticsPage" class="hidden">
+
+    <section class="hero">
+        <h2>IGCSE Mathematics — Statistics</h2>
+        <p>Learn how to collect, organise, represent and interpret data.</p>
+    </section>
+
+    <main class="container">
+
+        <button class="btn back-btn" onclick="openYear10()">
+            ← Back to IGCSE Mathematics
+        </button>
+
+        <div class="info">
+            <h2>Statistics Topics</h2>
+            <p>Choose a topic to access revision notes, worked examples and practice questions.</p>
+        </div>
+
+        <div class="topic-list">
+
+            <div class="topic">
+                <h3>Types of Data</h3>
+                <p>Understanding discrete, continuous, primary and secondary data.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Frequency Tables</h3>
+                <p>Organising data into frequency and grouped frequency tables.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Mean, Median, Mode and Range</h3>
+                <p>Calculating and interpreting measures of central tendency and spread.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Bar Charts and Pie Charts</h3>
+                <p>Constructing and interpreting statistical diagrams.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Histograms</h3>
+                <p>Using frequency density to construct and interpret histograms.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Frequency Polygons</h3>
+                <p>Representing grouped data using frequency polygons.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Cumulative Frequency</h3>
+                <p>Drawing cumulative frequency curves and estimating quartiles.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Box-and-Whisker Plots</h3>
+                <p>Interpreting quartiles, the interquartile range and outliers.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Scatter Diagrams and Correlation</h3>
+                <p>Identifying relationships between two variables and lines of best fit.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Statistical Interpretation</h3>
+                <p>Comparing data sets and drawing conclusions from statistical information.</p>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<!-- END IGCSE STATISTICS PAGE -->
 <!-- STANDARD FORM LESSON -->
 
 <!-- NUMBER REVISION NOTES PAGE -->
@@ -3311,6 +3393,7 @@ function openYear10() {
     document.getElementById("geometryPage").classList.add("hidden");
     document.getElementById("mensurationPage").classList.add("hidden");
     document.getElementById("trigonometryPage").classList.add("hidden");
+    document.getElementById("statisticsPage").classList.add("hidden");
 
     document.getElementById("year10Page").classList.remove("hidden");
 
@@ -3401,6 +3484,20 @@ function openTrigonometry() {
     document.getElementById("geometryPage").classList.add("hidden");
     document.getElementById("mensurationPage").classList.add("hidden");
     document.getElementById("trigonometryPage").classList.remove("hidden");
+
+    window.scrollTo(0, 0);
+}
+function openStatistics() {
+    document.getElementById("homePage").classList.add("hidden");
+    document.getElementById("igcsePage").classList.add("hidden");
+    document.getElementById("year10Page").classList.add("hidden");
+    document.getElementById("numberPage").classList.add("hidden");
+    document.getElementById("algebraPage").classList.add("hidden");
+    document.getElementById("graphsPage").classList.add("hidden");
+    document.getElementById("geometryPage").classList.add("hidden");
+    document.getElementById("mensurationPage").classList.add("hidden");
+    document.getElementById("trigonometryPage").classList.add("hidden");
+    document.getElementById("statisticsPage").classList.remove("hidden");
 
     window.scrollTo(0, 0);
 }
