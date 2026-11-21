@@ -354,7 +354,10 @@ footer {
 
 <div class="topic">
     <h3>Trigonometry</h3>
-    <p>Right-angled triangles, trigonometric ratios and applications.</p>
+    <p>Right-angled triangles, trigonometric ratios, sine rule and cosine rule.</p>
+    <button class="btn" onclick="openTrigonometry()">
+        Open Trigonometry
+    </button>
 </div>
 
 <div class="topic">
@@ -853,6 +856,80 @@ footer {
 </div>
 
 <!-- END IGCSE MENSURATION PAGE -->
+<!-- IGCSE TRIGONOMETRY PAGE -->
+
+<div id="trigonometryPage" class="hidden">
+
+    <section class="hero">
+        <h2>IGCSE Mathematics — Trigonometry</h2>
+        <p>Learn how to solve problems involving angles, sides and triangles.</p>
+    </section>
+
+    <main class="container">
+
+        <button class="btn back-btn" onclick="openYear10()">
+            ← Back to IGCSE Mathematics
+        </button>
+
+        <div class="info">
+            <h2>Trigonometry Topics</h2>
+            <p>Choose a topic to access revision notes, worked examples and practice questions.</p>
+        </div>
+
+        <div class="topic-list">
+
+            <div class="topic">
+                <h3>Introduction to Trigonometry</h3>
+                <p>Understanding right-angled triangles and the sides opposite, adjacent and hypotenuse.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Sine, Cosine and Tangent</h3>
+                <p>Using SOH CAH TOA to find unknown sides and angles.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Finding Missing Sides</h3>
+                <p>Applying trigonometric ratios to calculate unknown lengths.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Finding Missing Angles</h3>
+                <p>Using inverse sine, cosine and tangent to calculate angles.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Angles of Elevation and Depression</h3>
+                <p>Solving practical problems involving horizontal lines and angles.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Bearings and Trigonometry</h3>
+                <p>Using trigonometry to solve direction and distance problems.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Non-Right-Angled Triangles</h3>
+                <p>Applying the sine rule and cosine rule.</p>
+            </div>
+
+            <div class="topic">
+                <h3>Area of a Triangle</h3>
+                <p>Using the formula one-half ab sin C to calculate areas.</p>
+            </div>
+
+            <div class="topic">
+                <h3>3D Trigonometry</h3>
+                <p>Solving problems involving angles and lengths in three-dimensional shapes.</p>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<!-- END IGCSE TRIGONOMETRY PAGE -->
 <!-- STANDARD FORM LESSON -->
 
 <!-- NUMBER REVISION NOTES PAGE -->
@@ -3233,6 +3310,7 @@ function openYear10() {
     document.getElementById("graphsPage").classList.add("hidden");
     document.getElementById("geometryPage").classList.add("hidden");
     document.getElementById("mensurationPage").classList.add("hidden");
+    document.getElementById("trigonometryPage").classList.add("hidden");
 
     document.getElementById("year10Page").classList.remove("hidden");
 
@@ -3310,6 +3388,19 @@ function openMensuration() {
     document.getElementById("graphsPage").classList.add("hidden");
     document.getElementById("geometryPage").classList.add("hidden");
     document.getElementById("mensurationPage").classList.remove("hidden");
+
+    window.scrollTo(0, 0);
+}
+function openTrigonometry() {
+    document.getElementById("homePage").classList.add("hidden");
+    document.getElementById("igcsePage").classList.add("hidden");
+    document.getElementById("year10Page").classList.add("hidden");
+    document.getElementById("numberPage").classList.add("hidden");
+    document.getElementById("algebraPage").classList.add("hidden");
+    document.getElementById("graphsPage").classList.add("hidden");
+    document.getElementById("geometryPage").classList.add("hidden");
+    document.getElementById("mensurationPage").classList.add("hidden");
+    document.getElementById("trigonometryPage").classList.remove("hidden");
 
     window.scrollTo(0, 0);
 }
