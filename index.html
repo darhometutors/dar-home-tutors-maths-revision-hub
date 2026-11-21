@@ -689,12 +689,13 @@ footer {
             <p>Choose a topic to access revision notes, worked examples and practice questions.</p>
         </div>
 
-        <div class="topic-list">
-
-            <div class="topic">
-                <h3>Coordinates</h3>
-                <p>Plotting and reading coordinates on the Cartesian plane.</p>
-            </div>
+        <div class="topic">
+    <h3>Coordinates</h3>
+    <p>Plotting and reading coordinates on the Cartesian plane.</p>
+    <button class="btn" onclick="openGraphTopic('coordinates')">
+        Open Coordinates
+    </button>
+</div>
 
             <div class="topic">
                 <h3>Linear Graphs</h3>
@@ -1365,6 +1366,53 @@ footer {
 </div>
 
 <!-- END IGCSE EXAM PRACTICE PAGE -->
+    <!-- IGCSE COORDINATES LESSON PAGE -->
+<div id="coordinatesTopicPage" class="hidden">
+
+    <section class="hero">
+        <h2>Coordinates</h2>
+        <p>Learn how to read, plot and use coordinates on the Cartesian plane.</p>
+    </section>
+
+    <main class="container">
+
+        <button class="btn back-btn" onclick="openGraphs()">
+            ← Back to Graphs & Functions
+        </button>
+
+        <div class="info">
+            <h2>Coordinates — IGCSE Mathematics</h2>
+            <p>Revision notes, worked examples and examination practice.</p>
+        </div>
+
+        <div class="topic">
+            <h3>1. Revision Notes</h3>
+            <div id="coordinatesNotes"></div>
+        </div>
+
+        <div class="topic">
+            <h3>2. Worked Examples</h3>
+            <div id="coordinatesExamples"></div>
+        </div>
+
+        <div class="topic">
+            <h3>3. Practice Questions</h3>
+            <div id="coordinatesPractice"></div>
+        </div>
+
+        <div class="topic">
+            <h3>4. Exam-Style Questions</h3>
+            <div id="coordinatesExam"></div>
+        </div>
+
+        <div class="topic">
+            <h3>5. Quick Check</h3>
+            <div id="coordinatesQuick"></div>
+        </div>
+
+    </main>
+</div>
+<!-- END IGCSE COORDINATES LESSON PAGE -->
 <!-- STANDARD FORM LESSON -->
 
 <!-- NUMBER REVISION NOTES PAGE -->
@@ -3805,7 +3853,14 @@ function openGraphs() {
     document.getElementById("year10Page").classList.add("hidden");
     document.getElementById("numberPage").classList.add("hidden");
     document.getElementById("algebraPage").classList.add("hidden");
+    document.getElementById("coordinatesTopicPage").classList.add("hidden");
     document.getElementById("graphsPage").classList.remove("hidden");
+
+    window.scrollTo(0, 0);
+}
+    function openGraphTopic(topic) {
+    document.getElementById("graphsPage").classList.add("hidden");
+    document.getElementById("coordinatesTopicPage").classList.remove("hidden");
 
     window.scrollTo(0, 0);
 }
