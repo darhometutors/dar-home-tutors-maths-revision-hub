@@ -709,9 +709,12 @@ footer {
             </div>
 
             <div class="topic">
-                <h3>Gradient and Intercepts</h3>
-                <p>Finding gradients and intercepts of straight lines.</p>
-            </div>
+    <h3>Gradient and Intercepts</h3>
+    <p>Finding and interpreting the gradient and intercepts of straight lines.</p>
+    <button class="btn" onclick="openGraphTopic('gradientIntercepts')">
+        Open Gradient and Intercepts
+    </button>
+</div>
 
             <div class="topic">
                 <h3>Equations of Straight Lines</h3>
@@ -1932,6 +1935,53 @@ footer {
     </main>
 </div>
 <!-- END IGCSE LINEAR GRAPHS LESSON PAGE -->
+<!-- IGCSE GRADIENT AND INTERCEPTS LESSON PAGE -->
+<div id="gradientInterceptsTopicPage" class="hidden">
+
+    <section class="hero">
+        <h2>Gradient and Intercepts</h2>
+        <p>Understand the gradient and intercepts of straight-line graphs.</p>
+    </section>
+
+    <main class="container">
+
+        <button class="btn back-btn" onclick="openGraphs()">
+            ← Back to Graphs & Functions
+        </button>
+
+        <div class="info">
+            <h2>Gradient and Intercepts — IGCSE Mathematics</h2>
+            <p>Revision notes, worked examples and examination practice.</p>
+        </div>
+
+        <div class="topic">
+            <h3>1. Revision Notes</h3>
+            <div id="gradientInterceptsNotes"></div>
+        </div>
+
+        <div class="topic">
+            <h3>2. Worked Examples</h3>
+            <div id="gradientInterceptsExamples"></div>
+        </div>
+
+        <div class="topic">
+            <h3>3. Practice Questions</h3>
+            <div id="gradientInterceptsPractice"></div>
+        </div>
+
+        <div class="topic">
+            <h3>4. Exam-Style Questions</h3>
+            <div id="gradientInterceptsExam"></div>
+        </div>
+
+        <div class="topic">
+            <h3>5. Quick Check</h3>
+            <div id="gradientInterceptsQuick"></div>
+        </div>
+
+    </main>
+</div>
+<!-- END IGCSE GRADIENT AND INTERCEPTS LESSON PAGE -->
 <!-- STANDARD FORM LESSON -->
 
 <!-- NUMBER REVISION NOTES PAGE -->
@@ -4375,6 +4425,7 @@ function openGraphs() {
     document.getElementById("coordinatesTopicPage").classList.add("hidden");
     document.getElementById("graphsPage").classList.remove("hidden");
     document.getElementById("linearGraphsTopicPage").classList.add("hidden");
+    document.getElementById("gradientInterceptsTopicPage").classList.add("hidden");
 
     window.scrollTo(0, 0);
 }
@@ -4390,6 +4441,9 @@ function openGraphs() {
     if (topic === "linearGraphs") {
         document.getElementById("linearGraphsTopicPage").classList.remove("hidden");
     }
+        if (topic === "gradientIntercepts") {
+    document.getElementById("gradientInterceptsTopicPage").classList.remove("hidden");
+}
 
     window.scrollTo(0, 0);
 }
